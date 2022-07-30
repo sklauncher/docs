@@ -8,6 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'SKlauncher Wiki',
   tagline: 'Community-driven documentation for SKlauncher',
+  // TODO: Change to wiki.skmedix.pl when ready
   url: 'https://skmedix.github.io/',
   baseUrl: '/skl-wiki/',
   onBrokenLinks: 'throw',
@@ -24,7 +25,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'pl'],
   },
 
   presets: [
@@ -63,6 +64,9 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {
+            type: 'localeDropdown',
+          },
           {
             type: 'doc',
             docId: 'intro',
