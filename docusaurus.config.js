@@ -25,7 +25,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'pl'],
+    locales: ['en'],
   },
 
   presets: [
@@ -34,15 +34,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/sklauncher/skl-wiki/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl:
-            'https://github.com/sklauncher/skl-wiki/edit/main/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -60,9 +57,6 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            type: 'localeDropdown',
-          },
           {
             type: 'doc',
             docId: 'intro',
