@@ -36,3 +36,22 @@
 [data-theme='dark'] .navbar__logo {
   filter: invert(0%);
 }
+
+ul.emoji-list {
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+ul.emoji-list li {
+  display: flex;
+  align-items: flex-start;
+  line-height: 32px;
+}
+
+ul.emoji-list span {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 28px;
+  text-align: center;
+  width: 1.25em;
+}
