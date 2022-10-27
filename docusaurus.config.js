@@ -11,7 +11,7 @@ const config = {
   // TODO: Change to wiki.skmedix.pl when ready
   url: 'https://skmedix.github.io/',
   baseUrl: '/skl-wiki/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
