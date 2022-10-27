@@ -37,6 +37,10 @@
   filter: invert(0%);
 }
 
+[data-theme='dark'] .footer--dark {
+  --ifm-footer-background-color: var(--ifm-navbar-background-color);
+}
+
 ul.emoji-list {
   list-style-type: none;
   padding-left: 12px;
