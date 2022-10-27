@@ -61,7 +61,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Introduction',
           },
           {
             href: 'https://github.com/sklauncher/wiki',
@@ -77,7 +77,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Introduction',
                 to: '/docs/intro',
               },
             ],
