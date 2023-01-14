@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'SKlauncher Wiki',
+  title: 'SKlauncher Docs',
   tagline: 'Community-driven documentation for SKlauncher',
-  url: 'https://docs.skmedix.com/',
+  url: 'https://docs.skmedix.pl/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
