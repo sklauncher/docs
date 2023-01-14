@@ -8,9 +8,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'SKlauncher Wiki',
   tagline: 'Community-driven documentation for SKlauncher',
-  // TODO: Change to wiki.skmedix.pl when ready
-  url: 'https://skmedix.github.io/',
-  baseUrl: '/skl-wiki/',
+  url: 'https://docs.skmedix.com/',
+  baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
