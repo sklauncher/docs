@@ -50,7 +50,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'SKlauncher Wiki',
+        title: 'SKlauncher Docs',
         logo: {
           alt: 'SKlauncher Logo',
           src: 'img/logo.svg',
