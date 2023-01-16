@@ -1,6 +1,6 @@
 {
-  "position": 1,
-  "label": "Getting started",
+  "position": 3,
+  "label": "Modding",
   "collapsible": false,
   "link": {
     "type": "generated-index"
