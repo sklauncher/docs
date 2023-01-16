@@ -98,6 +98,8 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
         respectPrefersColorScheme: true,
       }
     }),
