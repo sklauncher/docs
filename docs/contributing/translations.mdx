@@ -6,54 +6,73 @@ title: Translating SKlauncher
 This document is a work in progress. Please help us improve it by contributing!
 :::
 
-Thank you in taking interest in translating SKlauncher!
-SKlauncher is translated by people who are kind enough to help us out with translations. You can help too and as a thank you be listed in the about section in the launcher settings!
+Thank you in taking interest in translating SKlauncher! This project is translated by people who are kind enough to help
+us out with our localization files. You can help too and as a thank you will be listed in the *about* section in the launcher
+settings along with the other translators and contributors!
 
-## What <span className="text--danger">NOT</span> to do when translating?
-
-* Do not just blindly copy and paste translations from Google Translate, Deepl etc. These can be inaccurate.
-* Do not make changes that you don't think are necessary. We get that you want to brag to your friends that your nickname can be found in the launcher, but please. Don't. New strings will eventually appear and you will have the opportunity to help us out and be listed in the about section.
+## What <span className="text--danger">NOT</span> to do when translating
+* Do not just blindly copy and paste translations from Google Translate, Deepl etc., these can be inaccurate.
+* Do not make changes that you don't think are necessary. We get that you want to brag to your friends that your
+nickname can be found in the launcher, but please. Don't. New strings will eventually appear, and you will have the
+opportunity to help us out and be listed in the about section.
 * Try to stick as close to the original string as possible. For example do not translate `Uhoh! It looks like the game has crashed. Sorry for the inconvenience :(` to `Oh no! Game has crashed!` equivalent in your language.
-* Do not add dots, commas, exclaimation marks to the end of the string if the [original](https://github.com/skmedix/SKlauncher/blob/main/assets/launcher/lang/sklmessages_en_US.properties) one doesn't have one.
+* Do not add any extra dots, commas, exclamation marks to the end of the string if the [original](https://github.com/skmedix/SKlauncher/blob/main/assets/launcher/lang/sklmessages_en_US.properties) one doesn't have one.
 
-## So how do I get started?
+## How to get started
 
-First of all see if there's anything to add or change in your language of choice.
+Before you start translating, you need to check if your language is already translated. You can do this by going to
+[SKlauncher's translations repository](https://github.com/skmedix/SKlauncher/tree/main/assets/launcher/lang) and
+checking if there is a file with your language code in it. If there is, you can help us out by checking if the translation
+is up-to-date and if there are any new strings that need to be translated. If you can't find your language, you can
+create a new translation. [More about it below.](#creating-a-new-translation)
 
-After you decide there's something you can change for the better, [create an account on GitHub](https://github.com/signup).
+All you need is a GitHub account to contribute to the translations. If you don't have one, you can create one
+[here](https://github.com/signup).
 
-Then navigate to [SKlauncher's translations repository](https://github.com/skmedix/SKlauncher/tree/main/assets/launcher/lang) and look for the language you are interested in.
+Once you have a GitHub account, you can navigate to
+[SKlauncher's translations repository](https://github.com/skmedix/SKlauncher/tree/main/assets/launcher/lang)
+and look for the language you are interested in.
 
-## What if my language is not yet in the repository?
-If it is already there [click here to skip this section](#editing-the-translation-files).
+### Creating a new translation
+To create a new translation, you need to create a new file in the
+[SKlauncher's translations repository](https://github.com/skmedix/SKlauncher/tree/main/assets/launcher/lang),
+and name it `sklmessages_XX_XX.properties` where `XX_XX` is your language code.
 
-Just create a new file named `sklmessages_<language code>.properties`. Without `<>` of course.
 ![Create new file option in the drop down menu](/img/translations/createnewfile.png)
 
-But how can you get a language code of the language you want to translate the launcher to? [Click here](https://minecraft.gamepedia.com/Language#Available_languages) to see all available language codes and to which language they correspond to.
-For instance if you want to translate SKlauncher to Silesian then create a file called `sklmessages_szl_PL.properties`.
+To find your language code, you can use [this website](https://minecraft.fandom.com/wiki/Language#Languages) to
+find your language and then look for the language code in the table in column `ISO 639-3`.
+
+For instance if you want to translate SKlauncher to *Silesian* then create a file called `sklmessages_szl_PL.properties`.
 ![Example for Silesian language](/img/translations/languagecodes.png)
 
-After you name the file, copy the contents of [`sklmessages_en_US.properties`](https://github.com/skmedix/SKlauncher/blob/main/assets/launcher/lang/sklmessages_en_US.properties) to your newly created file and don't forget to change first two lines to tell the launcher some information about your language.
+After you create a new file and name it correctly, you can start translating. To start translating, you need to copy
+the contents of the [English translation file](https://raw.githubusercontent.com/skmedix/SKlauncher/main/assets/launcher/lang/sklmessages_en_US.properties)
+and paste it into your new file. Then you can start translating like in the example below.
 
-From:
-```properties
-lang.name=English
-lang.code=en_US
-```
-To:
-```properties
-lang.name=Ślōnskŏ gŏdka
-lang.code=szl_PL
+```diff
+-lang.name=English
+-lang.code=en_US
++lang.name=Ślōnskŏ gŏdka
++lang.code=szl_PL
 ```
 
-## Editing the translation files
-This is the part where you can finally translate SKlauncher to your language.
+### Editing the existing translation
+If the language you want to translate the launcher to is already there, then you can just edit the existing file.
+To do that, navigate to the file you want to edit and click on the **Edit** button.
+
 You just change the part after `=` sign and that's pretty much it.
 
-Don't worry if you won't finish translating the launcher. Even translating it partially is a huge help to us.
+When you are done, scroll down to the bottom of the page where you can add a commit message and click on the
+**Commit changes** button. Don't worry if your translation is not perfect, we will review it and make sure it's good to go.
 
-### Alright I'm done. How do I propose the changes?
-Just do a pull request. If you edit the file from GitHub web editor then you just need to click on `Propose changes` button and create a pull request.
+## How to submit your translation
+To submit your translation, you need to create a **pull request**. To do that, navigate to the
+[SKlauncher's translations repository](https://github.com/skmedix/SKlauncher/) and click on the **Pull requests** tab.
+Then click on the **New pull request** button in the top right corner. You will be redirected to a page where you can
+choose the branch you want to merge your changes into. Choose `main` as a base, and your branch as a compare. Then add
+a title and a description to your pull request and click on the **Create pull request** button.
 
-And that's it. You have successfully submitted your changes for review. Review process takes around 1, 2 days but sometimes even shorter than that. Please check your e-mail (or GitHub notifications) once in a while to see if we didn't ask for any changes regarding your pull request.
+Now you have successfully submitted your changes to the launcher, and we will review them and merge them into the launcher
+if they are good to go. Review process takes about 1-2 days, but it can take less than that. Please check your e-mail
+(or GitHub notifications) once in a while to see if we have any questions or comments about your translation.
