@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "preinstall": "npx only-allow yarn",
+    "preinstall": "npx only-allow pnpm",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -41,7 +41,8 @@
       "last 1 safari version"
     ]
   },
+  "packageManager": "pnpm@8.7.5",
   "engines": {
-    "node": ">=16.14"
+    "node": ">=18.17"
   }
 }
