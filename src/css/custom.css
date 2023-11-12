@@ -59,3 +59,7 @@ ul.emoji-list span {
   text-align: center;
   width: 1.25em;
 }
+
+ul.emoji-list li p {
+  margin: 0;
+}
