@@ -23,6 +23,27 @@ To download **Adoptium** (Temurin 17) for Windows, go to [this page](https://ado
 4. Wait for the installation to finish, and then click on **Finish** button.
 5. If you didn't skip the *Custom Setup* screen, you can now run SKlauncher.
 
+### Linux
+
+1. Install Java using:
+    Debian/Ubuntu: ``sudo apt install default-jre``
+    Arch Linux: ``sudo pacman -S jre``
+2. Launch your terminal.
+3. Launch SKlauncher.jar with ``java -jar SKlauncher.jar``. SKlauncher should launch.
+
+Addionatly, you can setup a .desktop shortcut to SKlauncher.
+You can copy and paste this into a .desktop file:
+```
+[Desktop Entry]
+Comment=Minecraft® Launcher
+Exec=java -jar '/path/to/sklauncher.jar'
+GenericName=SKlauncher - The launcher for Minecraft®
+Icon=/path/to/icon
+MimeType=application/x-executable;
+Name=SKlauncher
+Terminal=false
+Type=Application
+```
 ## Java 8 with JavaFX
 
 :::danger
@@ -45,6 +66,7 @@ Yes, it will work. SKlauncher downloads the game's version of Java, so you can u
 SKlauncher is built with JavaFX, which may not be included in Java 8 by default. So you need to install Java 8 with JavaFX or Java 17.
 
 ## Common issues
+Windows:
 
 ### I have Temurin 17 installed, but it still says that I don't have Java installed
 In this situation you probably skipped the *Custom Setup* screen. To fix this, you need to reinstall Java 17,
