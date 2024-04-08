@@ -33,8 +33,8 @@ dependencies:
 
 devDependencies:
   '@docusaurus/module-type-aliases':
-    specifier: 3.1.1
-    version: 3.1.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: 3.2.1
+    version: 3.2.1(react-dom@18.2.0)(react@18.2.0)
   '@docusaurus/tsconfig':
     specifier: 3.1.1
     version: 3.1.1
@@ -1727,6 +1727,31 @@ packages:
       - supports-color
       - uglify-js
       - webpack-cli
+    dev: false
+
+  /@docusaurus/module-type-aliases@3.2.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-FyViV5TqhL1vsM7eh29nJ5NtbRE6Ra6LP1PDcPvhwPSlA7eiWGRKAn3jWwMUcmjkos5SYY+sr0/feCdbM3eQHQ==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@docusaurus/react-loadable': 5.5.2(react@18.2.0)
+      '@docusaurus/types': 3.2.1(react-dom@18.2.0)(react@18.2.0)
+      '@types/history': 4.7.11
+      '@types/react': 18.2.56
+      '@types/react-router-config': 5.0.11
+      '@types/react-router-dom': 5.3.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-helmet-async: 2.0.4(react-dom@18.2.0)(react@18.2.0)
+      react-loadable: /@docusaurus/react-loadable@5.5.2(react@18.2.0)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - supports-color
+      - uglify-js
+      - webpack-cli
+    dev: true
 
   /@docusaurus/plugin-content-blog@3.1.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
     resolution: {integrity: sha512-ew/3VtVoG3emoAKmoZl7oKe1zdFOsI0NbcHS26kIxt2Z8vcXKCUgK9jJJrz0TbOipyETPhqwq4nbitrY3baibg==}
@@ -2254,6 +2279,32 @@ packages:
       - supports-color
       - uglify-js
       - webpack-cli
+    dev: false
+
+  /@docusaurus/types@3.2.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-n/toxBzL2oxTtRTOFiGKsHypzn/Pm+sXyw+VSk1UbqbXQiHOwHwts55bpKwbcUgA530Is6kix3ELiFOv9GAMfw==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@mdx-js/mdx': 3.0.1
+      '@types/history': 4.7.11
+      '@types/react': 18.2.56
+      commander: 5.1.0
+      joi: 17.12.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-helmet-async: 1.3.0(react-dom@18.2.0)(react@18.2.0)
+      utility-types: 3.11.0
+      webpack: 5.90.2
+      webpack-merge: 5.10.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - supports-color
+      - uglify-js
+      - webpack-cli
+    dev: true
 
   /@docusaurus/utils-common@3.1.1(@docusaurus/types@3.1.1):
     resolution: {integrity: sha512-eGne3olsIoNfPug5ixjepZAIxeYFzHHnor55Wb2P57jNbtVaFvij/T+MS8U0dtZRFi50QU+UPmRrXdVUM8uyMg==}
