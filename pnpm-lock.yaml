@@ -33,8 +33,8 @@ dependencies:
 
 devDependencies:
   '@docusaurus/module-type-aliases':
-    specifier: 3.2.1
-    version: 3.2.1(react-dom@18.3.1)(react@18.3.1)
+    specifier: 3.3.2
+    version: 3.3.2(react-dom@18.3.1)(react@18.3.1)
   '@docusaurus/tsconfig':
     specifier: 3.2.1
     version: 3.2.1
@@ -1754,6 +1754,30 @@ packages:
       - supports-color
       - uglify-js
       - webpack-cli
+    dev: false
+
+  /@docusaurus/module-type-aliases@3.3.2(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-b/XB0TBJah5yKb4LYuJT4buFvL0MGAb0+vJDrJtlYMguRtsEBkf2nWl5xP7h4Dlw6ol0hsHrCYzJ50kNIOEclw==}
+    peerDependencies:
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      '@docusaurus/types': 3.3.2(react-dom@18.3.1)(react@18.3.1)
+      '@types/history': 4.7.11
+      '@types/react': 18.3.1
+      '@types/react-router-config': 5.0.11
+      '@types/react-router-dom': 5.3.3
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-helmet-async: 2.0.4(react-dom@18.3.1)(react@18.3.1)
+      react-loadable: /@docusaurus/react-loadable@6.0.0(react@18.3.1)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - supports-color
+      - uglify-js
+      - webpack-cli
+    dev: true
 
   /@docusaurus/plugin-content-blog@3.2.1(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5):
     resolution: {integrity: sha512-lOx0JfhlGZoZu6pEJfeEpSISZR5dQbJGGvb42IP13G5YThNHhG9R9uoWuo4IOimPqBC7sHThdLA3VLevk61Fsw==}
@@ -2100,6 +2124,16 @@ packages:
       '@types/react': 18.3.1
       prop-types: 15.8.1
       react: 18.3.1
+    dev: false
+
+  /@docusaurus/react-loadable@6.0.0(react@18.3.1):
+    resolution: {integrity: sha512-YMMxTUQV/QFSnbgrP3tjDzLHRg7vsbMn8e9HAa8o/1iXoiomo48b7sk/kkmWEuWNDPJVlKSJRB6Y2fHqdJk+SQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      '@types/react': 18.3.1
+      react: 18.3.1
+    dev: true
 
   /@docusaurus/theme-classic@3.2.1(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5):
     resolution: {integrity: sha512-+vSbnQyoWjc6vRZi4vJO2dBU02wqzynsai15KK+FANZudrYaBHtkbLZAQhgmxzBGVpxzi87gRohlMm+5D8f4tA==}
@@ -2282,6 +2316,32 @@ packages:
       - supports-color
       - uglify-js
       - webpack-cli
+    dev: false
+
+  /@docusaurus/types@3.3.2(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-5p201S7AZhliRxTU7uMKtSsoC8mgPA9bs9b5NQg1IRdRxJfflursXNVsgc3PcMqiUTul/v1s3k3rXXFlRE890w==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@mdx-js/mdx': 3.0.1
+      '@types/history': 4.7.11
+      '@types/react': 18.3.1
+      commander: 5.1.0
+      joi: 17.13.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-helmet-async: 1.3.0(react-dom@18.3.1)(react@18.3.1)
+      utility-types: 3.11.0
+      webpack: 5.91.0
+      webpack-merge: 5.10.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - supports-color
+      - uglify-js
+      - webpack-cli
+    dev: true
 
   /@docusaurus/utils-common@3.2.1(@docusaurus/types@3.2.1):
     resolution: {integrity: sha512-N5vadULnRLiqX2QfTjVEU3u5vo6RG2EZTdyXvJdzDOdrLCGIZAfnf/VkssinFZ922sVfaFfQ4FnStdhn5TWdVg==}
