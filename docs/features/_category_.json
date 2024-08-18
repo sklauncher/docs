@@ -1,0 +1,8 @@
+{
+  "position": 3,
+  "label": "Features",
+  "collapsible": false,
+  "link": {
+    "type": "generated-index"
+  }
+}
