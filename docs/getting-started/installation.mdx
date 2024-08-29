@@ -6,35 +6,68 @@ sidebar_position: 2
 
 To run SKlauncher you need to have Java installed on your computer. In this guide we will show you how to install Java and SKlauncher.
 
-## Java 17
-For a long time SKlauncher has been requiring Java 8 *with JavaFX*, but not anymore. Now you can use any version of Java above 11.
-We still recommend using the version of Java with **LTS** (Long-term support), which is Java 17.
-
-### Windows
-To download **Adoptium** (Temurin 17) for Windows, go to [this page](https://adoptium.net/) and click on the **Latest LTS Release** button.
-
-1. Run the installer and follow the instructions.
-2. **Make sure** to select following options in *Custom Setup* screen:
-    - Add to PATH
-    - Associate .jar
-    - Set JAVA_HOME variable
-    - JavaSoft (Oracle) registry key
-3. Click on **Next** button, and then on **Install** button.
-4. Wait for the installation to finish, and then click on **Finish** button.
-5. If you didn't skip the *Custom Setup* screen, you can now run SKlauncher.
-
-## Java 8 with JavaFX
+## Java Requirements
+For a long time, SKlauncher required Java 8 with JavaFX, but this is no longer the case. Now you can use any version of Java above 11. We recommend using the LTS (Long-term support) version, which is currently Java 21.
 
 :::danger
-Support for Java 8 with JavaFX will be removed in the future. So we recommend using Java 17.
+Support for Java 8 with JavaFX will be removed in the future. We recommend using Java 21.
 :::
+
+## Installing Java
+
+### Java 21 (Recommended)
+
+#### Windows
+1. Go to [Adoptium](https://adoptium.net/) and click on the **Latest LTS Release** button.
+2. Run the installer and follow the instructions.
+3. In the *Custom Setup* screen, make sure to select the following options:
+   - Add to PATH
+   - Associate .jar
+   - Set JAVA_HOME variable
+   - JavaSoft (Oracle) registry key
+4. Click **Next**, then **Install**.
+5. Wait for the installation to finish, then click **Finish**.
+
+#### Linux
+Install Java 21 using your distribution's package manager. Here are instructions for some common distributions:
+
+##### Ubuntu/Debian:
+```
+sudo apt update
+sudo apt install openjdk-21-jdk
+```
+
+##### Fedora:
+```
+sudo dnf install java-21-openjdk
+```
+
+##### Arch Linux:
+```
+sudo pacman -S jdk21-openjdk
+```
+
+### Java 8 with JavaFX
 
 :::caution
 Sometimes your Java 8 may be too old to run SKlauncher. In this case, you need to update it.
 :::
 
-If for some reason you can't use Java 17, you can use Java 8 with JavaFX. To do this, you need to install Java 8 with JavaFX.
-There is few ways to do this, but we recommend using [Oracle Java 8](https://www.java.com/en/download/), or [Liberica 8 Full JDK](https://bell-sw.com/pages/java-8-lts/).
+If you can't use Java 21, you can use Java 8 with JavaFX. We recommend using either:
+- [Oracle Java 8](https://www.java.com/en/download/)
+- [Liberica 8 Full JDK](https://bell-sw.com/pages/java-8-lts/)
+
+## Running SKlauncher
+
+### Windows
+If you didn't skip the Custom Setup screen, you can now run SKlauncher.
+
+### Linux
+To run SKlauncher on Linux, use the following command in the terminal:
+```
+java -jar SKlauncher.jar
+```
+Make sure you're in the directory containing the SKlauncher.jar file, or provide the full path to the file.
 
 ## Common questions
 
@@ -42,12 +75,12 @@ There is few ways to do this, but we recommend using [Oracle Java 8](https://www
 Yes, it will work. SKlauncher downloads the game's version of Java, so you can use any version of Java on your computer.
 
 ### Why do I need Java 8 with JavaFX?
-SKlauncher is built with JavaFX, which may not be included in Java 8 by default. So you need to install Java 8 with JavaFX or Java 17.
+SKlauncher is built with JavaFX, which may not be included in Java 8 by default. So you need to install Java 8 with JavaFX or Java 21.
 
 ## Common issues
 
-### I have Temurin 17 installed, but it still says that I don't have Java installed
-In this situation you probably skipped the *Custom Setup* screen. To fix this, you need to reinstall Java 17,
+### I have Temurin 21 installed, but it still says that I don't have Java installed
+In this situation you probably skipped the *Custom Setup* screen. To fix this, you need to reinstall Java 21,
 and make sure to [follow the instructions](/getting-started/install#windows) in the *Custom Setup* screen.
 
 ### I have Liberica 8 installed, but it still says that I don't have Java 8 with JavaFX
