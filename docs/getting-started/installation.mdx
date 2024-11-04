@@ -10,7 +10,9 @@ To run SKlauncher you need to have Java installed on your computer. In this guid
 For a long time, SKlauncher required Java 8 with JavaFX, but this is no longer the case. Now you can use any version of Java above 11. We recommend using the LTS (Long-term support) version, which is currently Java 21.
 
 :::danger
+
 Support for Java 8 with JavaFX will be removed in the future. We recommend using Java 21.
+
 :::
 
 ## Installing Java
@@ -21,10 +23,10 @@ Support for Java 8 with JavaFX will be removed in the future. We recommend using
 1. Go to [Adoptium](https://adoptium.net/) and click on the **Latest LTS Release** button.
 2. Run the installer and follow the instructions.
 3. In the *Custom Setup* screen, make sure to select the following options:
-   - Add to PATH
-   - Associate .jar
-   - Set JAVA_HOME variable
-   - JavaSoft (Oracle) registry key
+    - Add to PATH
+    - Associate .jar
+    - Set JAVA_HOME variable
+    - JavaSoft (Oracle) registry key
 4. Click **Next**, then **Install**.
 5. Wait for the installation to finish, then click **Finish**.
 
@@ -50,7 +52,9 @@ sudo pacman -S jdk21-openjdk
 ### Java 8 with JavaFX
 
 :::caution
+
 Sometimes your Java 8 may be too old to run SKlauncher. In this case, you need to update it.
+
 :::
 
 If you can't use Java 21, you can use Java 8 with JavaFX. We recommend using either:
@@ -58,26 +62,63 @@ If you can't use Java 21, you can use Java 8 with JavaFX. We recommend using eit
 - [Liberica 8 Full JDK](https://bell-sw.com/pages/downloads/#jdk-8-lts)
 
 ## Running SKlauncher
+You don't need to [register](/getting-started/register) to try it, but when you see the "log in" screen we recommend you read the [Log in](/getting-started/login) guide to avoid headaches.
 
 ### Windows
 If you didn't skip the Custom Setup screen, you can now run SKlauncher.
 
 ### Linux
-To run SKlauncher on Linux, use the following command in the terminal:
+To run SKlauncher on Linux, use the following command in the Terminal:
+
 ```
 java -jar SKlauncher.jar
 ```
-Make sure you're in the directory containing the SKlauncher.jar file, or provide the full path to the file.
+
+Make sure you're in the directory containing the SKlauncher.jar\* file, or provide the full path to the file.
+
+:::tip
+
+You may need to give it execute permissions first by typing `chmod +x SKlauncher.jar` (and maybe `755` instead of `+x`).
+
+:::
+
+<small>\* - When downloading the name is in SKlauncher-version.jar format. Ideally, you should always rename it to SKlauncher in case you've to download it again (especially if you make a shortcut or script to launch it).</small>
 
 ## Common questions
 
 ### I have Java X, but the game requires Java Y, will it work?
-Yes, it will work. SKlauncher downloads the game's version of Java, so you can use any version of Java on your computer.
+Yes, it will work. SKlauncher downloads the game's version of Java, so you can use any version of Java on your computer. \*
+
+<small>\* - And if you want to use another Java when playing (like using Java 21 when the game would use Java 17), you can do it! But the explanation is [here](/faq/launcher-related#can-i-use-a-different-java-for-the-game).</small>
 
 ### Why do I need Java 8 with JavaFX?
 SKlauncher is built with JavaFX, which may not be included in Java 8 by default. So you need to install Java 8 with JavaFX or Java 21.
 
+### Can I NOT install Java?
+Yes, but you will need to understand 2 things:
+1. You will need to use the extractable version of Java (usually .zip for Windows and .tar.gz for Linux and Mac OS).
+2. You will need to run SKlauncher (.jar version) via commands (for example `java -jar SKlauncher.jar`).
+
+And you will need to have a minimum of knowledge about understanding your working directory, relative/absolute paths, using "quotes" if that path has spaces in it (or some specific character), etc.
+
+<small>
+    For example, this is what it would be like to run SKlauncher via CMD commands in Windows when my working directory is the Downloads folder:\
+    `"jdk-21.0.5+11\bin\java.exe" -jar SKlauncher.jar`
+</small>
+
+### Can I install SKlauncher in another folder?
+Of course! But the full answer on how to do it is [here](/faq/launcher-related#can-i-install-sklauncher-in-another-folder).
+
 ## Common issues
+
+:::tip
+
+Did you already have Java before and you installed the one in the guide?\
+Did you uninstalled every Java and you're about to install the one in the guide?
+
+It may be a good idea to restart the PC.
+
+:::
 
 ### I have Temurin 21 installed, but it still says that I don't have Java installed
 In this situation you probably skipped the *Custom Setup* screen. To fix this, you need to reinstall Java 21,

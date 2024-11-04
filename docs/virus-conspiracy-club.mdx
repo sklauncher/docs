@@ -1,0 +1,124 @@
+---
+slug: /virus
+title: Virus Conspiracy Club
+description: Does SKlauncher have any viruses or vulnerabilities?
+unlisted: true
+---
+
+This page addresses common questions and misconceptions about SKlauncher and its [security](https://skmedix.pl/security).\
+Misunderstandings about launchers like SKlauncher can arise from misinformation, vague suspicions, or specific issues left unexplained. Let’s clarify some of these concerns.
+
+:::warning
+
+1. A certain level of knowledge is necessary to analyze and determine if software is malicious.
+2. While this doc focuses on SKlauncher, much of it applies to other games, programs, and launchers too.
+
+:::
+
+***
+
+## Is SKlauncher a Virus?
+No, SKlauncher is not a virus. However, certain warnings and security alerts can appear during download or execution. Here’s what you need to know:
+
+:::note
+
+To simplify things (*since there are many Antivirus and hundreds of combinations of security settings*), let's pretend you're a **Windows** user with **Windows Defender** and **all its options enabled**.
+
+:::
+
+### Downloading
+> **When you download the .exe or .jar file, your browser may block it as "potentially unwanted".**
+
+This occurs because of SmartScreen, which is reputation-based. Files that are new and unsigned often trigger these alerts.\
+As more users download and approve SKlauncher, this alert will disappear. Generally, the .exe file might clear SmartScreen faster than the .jar.
+
+Why does this happen? Since the file is unsigned and new, it doesn’t yet have a trustworthy reputation in SmartScreen.
+
+:::note
+
+The [Downloads](https://skmedix.pl/downloads) page provides an SHA-256 checksum, which you can use to verify the file integrity.\
+Compare this with the checksum on [VirusTotal](https://www.virustotal.com/) to ensure your download hasn’t been tampered with.
+
+:::
+
+PS: You can test SmartScreen’s behavior on the [demo website](https://demo.smartscreen.msft.net/) under *URL Rep Demos*.
+
+### Running
+> **When starting the .exe, you may see an alert saying "an unrecognized app was prevented from starting".**
+
+Again, it will always happen because it's SmartScreen. Especially to the .exe file because it's executed directly by Windows while the .jar is executed by the Java Virtual Machine.\
+We're still in the same dilemma as in downloads: it's reputation based and the more people click on "More info -> Run anyway", the faster the alert will disappear.
+
+PS: You can test SmartScreen’s behavior on the [demo website](https://demo.smartscreen.msft.net/) under *App Rep Demos*.
+
+> **When navigating through the different launcher options, the Antivirus notifies you that a threat has been blocked.**
+
+If this occurs, check what specifically is being flagged. But the last time something like this happened, it happened when installing Forge.\
+Windows Defender at first look looks like it flagged SKlauncher, but it turned out it was flagging the Forge installer (which is literally downloaded from the Forge server).
+
+If you’re downloading a modpack, files come from sources like CurseForge or Modrinth, where individual mods or downloaded files might trigger Antivirus alerts.\
+At first glance, this can look like an SKlauncher issue when it's actually a third-party file being flagged.
+
+## Are there any Vulnerabilities?
+SKlauncher has experienced only one known vulnerability, Log4j, which affected many platforms. SKlauncher patched it faster than Microsoft, and there were no reports of SKlauncher users being impacted.\
+Fractureiser (a malware in certain mods) is another example, SKlauncher actively detected and warned users if an infected mod was detected during installation.
+
+If you hear about a vulnerability affecting SKlauncher or the game, remember:
+1. Stay calm and investigate.
+2. Avoid using the launcher or game until you’re sure what the vulnerability affects.
+3. Report concerns on the [Discord server](https://skmedix.pl/discord) so the developer team can address any legitimate risks.
+
+## What about user data?
+There’s a myth that SKlauncher stores or sells user data, especially for Microsoft accounts. This is false. Here’s a breakdown of what SKlauncher actually stores:
+
+### Microsoft accounts
+- Account data:
+    - Absolutely nothing
+- Profile data:
+    - Absolutely nothing
+- Launcher data:
+    - Google Analytics
+
+### Offline accounts
+- Account data:
+    - Email
+    - Password (stored with Argon2id, no plain text or insecure stuff)
+    - Discord ID (optional since you should have used this option)
+- Profile data:
+    - Username
+    - Skin
+    - Cape
+    - Slim
+- Launcher data:
+    - Google Analytics
+
+So if you didn't make an account in SKlauncher only Google Analytics data is received when using the launcher.
+
+## Conclusion
+SKlauncher is not malicious and will not try to sell your data (especially Microsoft data). Every detection over time always turned out to be a false positive.
+
+***
+
+Would a more detailed answer with code and all that nice stuff be great? It really would! But it's hard to respond to something that isn't specific.\
+You tell me "SKlauncher has a virus because this report says it does X" and I've to reverse engineer what the report says and ask myself "Of everything my launcher does, what is the closest thing to this?". Because even if I report the false positive to the Antivirus, they're never going to tell me "Oh yeah sorry, it's just that you do X thing and we misinterpreted it".
+
+How many times have you heard "SKlauncher is a virus"? Probably many.\
+How many times did you hear "SKlauncher verifies that your DNS hasn’t been altered to ensure secure connections to SKlauncher, Microsoft, Mojang, etc. and even checks if any mod you installed is infected by Fractureiser"? I put my hands on the fire: you never heard of it.
+
+Why does this happen? Because those spreading these accusations don’t understand the technology. They don’t know how to generate or interpret reports, and they’re often uninterested in finding the truth.\
+For example, once I was flagged for collecting your list of games, but the reality was simple: I read and write the same file that Minecraft Launcher uses (launcher_profiles.json). If they’d looked more closely at the report, they’d have seen this for themselves.
+
+***
+
+Does all this mean you should ignore all the alerts you see? Of course not!\
+Just take the trouble to analyze the results as well as possible and even think if there is any sense (like the time a detection said that we had a Trojan in Java but that was marked to the .exe and not to the .jar...in other words, an absolute nonsense).
+
+:::note
+
+Curious about how the "Virus Conspiracy Club" around SKlauncher began? To dive in, you’ll need:
+1. **Spanish fluency**: The controversy originated in the Spanish-speaking community.
+2. **Time and interest**: Be prepared for hours of video content and extensive reading.
+
+So once warned, [here](https://github.com/SoyRA/Migueleada) is the link.
+
+:::
