@@ -34,15 +34,33 @@ Sometimes you need the logs to show even more information to find the cause of t
 
 :::warning
 
-You should do this only if requested to do it and after that revert the changes.
+You should do this *only if requested to do it* and **after that revert the changes**.
 
 :::
 
-Start the launcher and edit the installation you're having problems with.\
-Then you must edit in the "More Options" section the following:\
-\- Launcher Visibility: *Keep the launcher open and show game output*\
-\- JVM Arguments: Add at the end `-Xdiag -Dsklauncher.debug=true` (remember there is space between arguments)
+:::danger
 
-After that you start the game and you'll see the game console open and that's it. Reproduce again the problem you're having and send all the logs (copy and paste everything the console says might be necessary).
+Be careful with the **exposed data**!\
+Sending everything to **[mclo.gs](https://mclo.gs/)** and sending the link is recommended, because **it will censor information** such as the **access token** (a concern if you're using Microsoft login).
 
-PS: If the problem is about the launcher and it doesn't generate logs, you could start it from your Terminal / CMD with `java -jar SKlauncher.jar`
+But this would only matter to you for the *If you can't start the game or there is a problem inside it...* part.
+
+:::
+
+#### If you can't even reach the launcher...
+1. [Download](/getting-started/downloads#downloading) the SKlauncher in its .jar version and then start it by Terminal commands: `java -jar SKlauncher.jar`
+2. Copy the entire contents of the console and paste it into the Discord chat (when it ends or seems to do nothing more).
+
+#### If you can't start the game or there is a problem inside it...
+1. Start the launcher, go to *Launcher Settings* and enable the *Show Launcher Console* option. Then you'll see that a new tab has been added to the main screen: Launcher Log. Click on it so you can see the logs so far.
+2. Edit the installation you're having problems with. Then you must edit in the "More Options" section the following:
+    - Launcher Visibility: *Keep the launcher open and show game output*
+    - JVM Arguments: Add at the end `-Xdiag -Dsklauncher.debug=true` (remember there is space between arguments, so first add a space before pasting this)
+3. After that you start the game and you'll see the Game Output window and that's it. Reproduce again the problem you're having and send everything.
+
+:::info
+
+- The *Launcher Log* tab is the same as the Launcher log file.
+- The *Game Output* window looks like the same as sending both Game logs files, but with a bit more information at the beginning (so sending the content of this window should be more than enough).
+
+:::
