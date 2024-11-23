@@ -1,0 +1,8 @@
+{
+  "position": 4,
+  "label": "Frequently Asked Questions",
+  "collapsible": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

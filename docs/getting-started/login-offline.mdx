@@ -1,0 +1,48 @@
+---
+slug: /getting-started/login/offline
+title: Offline login
+unlisted: true
+---
+
+:::info
+
+This option allows you to use **any username** because *this is how the game is coded*, <u>no one will be able to access your Microsoft or SKlauncher account</u> when using the same username.\
+You will be able to play multiplayer, but only on servers that allow offline players ([online-mode=false](/troubleshooting/game-related#failed-to-login-invalid-session)).
+
+:::
+
+## Login
+1. Run SKlauncher and click the "Switch to offline mode" button (currently located in the bottom left corner).
+2. Type the same username you made on the SKlauncher website (username, not email) to use your SK account (otherwise, type any username you want to use) and then click the "Login offline" button.
+3. If everything is ok, you will see that you are logged in to SKlauncher.
+
+## Common questions
+
+### Can I really use any username without a password? Isn't this a serious problem?
+This is how offline accounts work because that's how the game is coded.
+
+If you type the username of a Microsoft account (like Notch) you will only see the skin/cape that he has set. But you won't be able to change or see any private data or anything that affects the real user. \*\
+<small>\* - The same happens if you type the username of an SKlauncher account.</small>
+
+In both cases you've nothing to worry about your data.
+
+### If I can use any username, what happens on servers?
+- Online Mode: Nothing, since an Offline account can't join a server with [online-mode=true](/troubleshooting/game-related#failed-to-login-invalid-session).
+- Offline Mode: Literally play with all your stuff, that's why [online-mode=false](/troubleshooting/game-related#failed-to-login-invalid-session) servers use plugins/mods that ask you to type `/register example_password example_password` in the chat the 1st time and then the following times typing `/login example_password`\*.
+
+<small>\* - Obviously, if you see that you join a server the 1st time in your life and it asks you to login...it means that someone else registered with that user.</small>
+
+### What data does SKlauncher store about my SKlauncher account?
+- Account data:
+    - Email
+    - Password (stored with Argon2id, no plain text or insecure stuff)
+    - Discord ID (optional since you should have used this option)
+- Profile data:
+    - Username
+    - Skin
+    - Cape
+    - Slim
+- Launcher data:
+    - Google Analytics
+
+So if you didn't make an account in SKlauncher only Google Analytics data is received when using the launcher.

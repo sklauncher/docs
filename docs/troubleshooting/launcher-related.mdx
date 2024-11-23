@@ -1,0 +1,54 @@
+---
+title: Launcher related
+description: Problems with SKlauncher (the launcher itself)
+sidebar_position: 2
+---
+
+:::tip
+
+Before you start looking here, check the following pages first:
+- [Installation - Common issues](/getting-started/install#common-issues)
+- [Log in](/getting-started/login)
+
+:::
+
+## Error: Unable to access jarfile when opening SKlauncher
+The path [where SKlauncher is installed](/faq/launcher-related#where-is-sklauncher-installed) contains special characters (like `?, !, ^, &, $`) or you put it in OneDrive.
+
+## Launcher starts but closes or keeps loading forever
+1. Delete other launcher folders located in `.minecraft`
+2. Delete `sklauncher` folder located in `.minecraft`
+3. Delete `java` folder located in `%APPDATA%`
+4. Check that Java is allowed in your Firewall and/or Antivirus.
+5. Follow the [Installation](/getting-started/install) guide again and restart the PC.
+
+## My skin hasn't changed
+- If there are no problems with the server (like the overload that occurred in August 2021) or problems with your connection:
+  - When you upload your skin/cape for the first time you should see the change instantly (if you already have the Launcher/Game open, you should close it).
+  - But when you want to change your skin/cape for the second, third, etc. time it may take a couple of hours to change (and it's even possible that the Launcher shows your old skin but inside the Game you already see the new one).
+- So if you saved the skin/cape [properly](/faq/web-related#how-do-i-put-on-a-skin-or-cape), you don't have much else to do but wait.
+
+## My skin isn't visible on servers or with mods
+- <u>Singleplayer</u>: If it works in Vanilla (no mods), then it could be a problem with the Mod Loader or one of the mods.
+  - If it's a particular mod, you don't use it and done. But if it was the Mod Loader there is not much you can do (you could report it in [the Discord server](https://skmedix.pl/discord)).
+- <u>Multiplayer</u>: Some servers have plugins to change the skin by typing `/skin MicrosoftUsername` in the chat (and even allow to put the url of the skin, but it depends on the plugin).
+
+## I can't see any version in SKlauncher
+Check if your [Launcher logs](/faq/uncategorized#where-are-the-logs-located) says anything about "DNS Poisoning", if it does you're in trouble:
+1. Start a full system scan with your Antivirus, the stronger the scan the better. And waits for it to finish.
+    - Hey! Maybe you don't have any virus and you know perfectly well that you ran something that was going to change what is mentioned in step 2.
+2. Disconnect from Internet and open `%WINDIR%\System32\drivers\etc\hosts` file with Notepad. Delete unwanted DNS text lines without # at the beginning of the text lines (especially if they say something about Microsoft, Mojang, etc).
+3. Run CMD as administrator and type `ipconfig /flushdns`. After that just restart your PC, reconnect to Internet and run SKlauncher.
+    - If it still doesn't work delete .json files of the launcher and run again. If you've still questions and problems, head to our [Discord](https://skmedix.pl/discord).
+
+## I can't allocate more than 1 GB
+You must have x64 (64-bits) Java installed, read the [Install](/getting-started/install) guide.
+
+## I can only play the Demo mode
+If you haven't [forced the demo mode](/faq/launcher-related#can-i-force-the-demo-mode), then read the [Log in](/getting-started/login) guide again.
+
+## 'X' client doesn't work
+Edit the Client installation in the launcher and enable Compatibility Mode.
+
+## Going into Friends tab on Hypixel hangs the game
+Edit the installation you're using in the launcher and enable Compatibility Mode.

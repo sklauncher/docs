@@ -1,0 +1,85 @@
+---
+title: Open to LAN worlds
+description: You can play in your Singleplayer world with up to 8 friends in LAN
+sidebar_position: 1
+---
+
+You can play in your Singleplayer world with up to 8 friends in LAN, thanks to the fact that since Release 1.3.1 the game has an integrated server\* in the client.
+
+<small>\* - If you're going to play on a version prior to the mentioned one, you'll have to create a [dedicated server](/servers/dedicated-server).</small>
+
+## Hosting
+1. You want to be the creator, so you start the game and go to *Singleplayer* -> *Play Selected World* / *Create New World* and once the world is loaded you can press <kbd>ESC</kbd> and click **Open to LAN**.
+2. Now choose the *Game Mode* and if you want to *Allow Commands*, then click **Start LAN World**.
+3. Done, you should see a message like this in the chat: `Local game hosted on port [50000]` (the port may be different).
+    - Depending on the version it can show you the IP and Port (for example: 192.168.1.100:50000).
+4. Tell your friends to join.
+
+## Joining
+1. The host already did everything and you want to connect, then you start the game and go to *Multiplayer*.
+2. You will see a caption that says **Scanning for games on your local network**, below it the host world should appear.
+    - Every 1.5 seconds it refreshes, so don't spam the *Refresh* button.
+3. Done, select the server and click **Join Server** (or just double click).
+    - The *Direct Connection* or *Add Server* option might work only if you and the host are Microsoft accounts, otherwise you will get [this](#failed-to-login-invalid-session) error.
+
+## Common issues
+There are many possible problems and some are detailed in [this](https://www.howtogeek.com/242375/how-to-troubleshoot-minecraft-lan-game-problems/) external link.\
+Assuming the best case scenario where you know about IP, Firewall, etc. and therefore you've everything properly configured, there are 2 very common and "difficult" problems.
+
+### Failed to login: Invalid session
+That's already answered [here](/troubleshooting/game-related#failed-to-login-invalid-session), but you don't have access to the `server.properties` file in this case!\
+There are two possible solutions, the 1st one would work in any case.
+
+#### Vanilla (no mods)
+Players will only be able to connect if it appears in Multiplayer under *Scanning for games on your local network*.\
+If the world isn't listed there (since connecting by IP:Port will give the invalid session error), you'll have to do [this](#the-world-is-not-listed-in-the-lan-list).
+
+#### Modding
+There are some mods that only add the option to change the Online Mode and this is what you're looking for.\
+Honestly you should have already seen the [Modding](/category/modding) guide and have an idea that, depending on the mod you want to install, you'll need to install the required Mod Loader first.
+
+Some mods that allow you to change Online Mode are the following:
+- [Lan Server Properties](https://www.curseforge.com/minecraft/mc-mods/lan-server-properties)
+- [EasyLAN](https://www.curseforge.com/minecraft/mc-mods/easylan)
+- [Custom LAN](https://www.curseforge.com/minecraft/mc-mods/custom-lan)
+- [Server.Properties for LAN](https://www.curseforge.com/minecraft/mc-mods/server-properties-for-lan)
+
+Obviously install just one, not all of them! And you may prefer to search for another one because they may not be for the version and/or Mod Loader you want to use.
+
+### The world is not listed in the LAN list
+There are some cases where everyone has everything properly configured (properly in LAN, Firewall allowed, etc.) but to some (or none) the world appears in LAN.\
+In my case it was always solved by modifying the network metric (this is explained in Windows, I'm not sure how it will be with Linux / Mac OS).
+
+1. Everyone must close the game and the launcher, but have Hamachi on (assuming you use Hamachi or another to have a virtual LAN).
+2. Run *Windows PowerShell* as administrator and type this command: `Get-NetIPInterface`
+
+<details>
+    <summary>You will see something like this</summary>
+
+    ```
+    ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMetric Dhcp     ConnectionState PolicyStore
+    ------- --------------                  ------------- ------------ --------------- ----     --------------- -----------
+    5       Hamachi                         IPv6                  1500              15 Enabled  Connected       ActiveStore
+    8       Ethernet                        IPv6                  1500              25 Enabled  Connected       ActiveStore
+    1       Loopback Pseudo-Interface 1     IPv6                  1500              75 Disabled Connected       ActiveStore
+    5       Hamachi                         IPv4                  1500              15 Enabled  Connected       ActiveStore
+    8       Ethernet                        IPv4                  1500              25 Enabled  Connected       ActiveStore
+    1       Loopback Pseudo-Interface 1     IPv4                  1500              75 Disabled Connected       ActiveStore
+    ```
+
+</details>
+
+3. Now you must check the `ifIndex` and `InterfaceMetric` to modify them with this command:\
+`Set-NetIPInterface -InterfaceIndex XX -InterfaceMetric YY`
+    - Lower metric means higher priority (I use Hamachi 15, Ethernet 25 and Loopback 75).
+    - Example command to make Hamachi 15: `Set-NetIPInterface -InterfaceIndex 5 -InterfaceMetric 15`
+4. Done, restart the PC and everything should be fine now.
+    - Remember that everyone should do this.
+
+:::note
+
+If you look at the logs, you'll see that it tells you that there is an error about an invalid session! But it allows you to join anyway.
+
+I also remind you that this assumes the best case scenario (everything is perfectly configured, just not using the correct network adapter) and that if it fails again just reboot the PC (at least, that was the solution to the few times it happened to me).
+
+:::
