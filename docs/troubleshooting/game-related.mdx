@@ -1,0 +1,61 @@
+---
+title: Game related
+description: Problems with Minecraft - Java Edition (the game)
+sidebar_position: 3
+---
+
+## Game doesn't start due to GLFW, OpenGL, ig7icd64.dll or atio6axx.dll error
+Possible solutions which you'll have to search on the Internet if you don't understand something:
+- Check for driver updates on the graphics brand's website: Search and update manually, because sometimes the automatic software says "you already have the latest version" and it's not true.
+    - Hey, if you don't have a dGPU then you'll have to search for the CPU drivers (that updates the iGPU drivers...usually).
+- Try reinstalling your graphics drivers: Especially check that you can do a clean install (restore factory graphics settings).
+    - If it doesn't ask you to do so, restart the PC anyway.
+- Make sure the game is set to [prefer high performance graphics](/faq/game-related#how-to-change-the-gpu-used-in-the-game) in the OS and/or driver control panel.
+
+:::note
+
+If you're pretty sure you did everything correctly and the problem persists, it means that your GPU no longer supports the version of the game you're trying to start.\
+For example: Release 1.17 moved OpenGL 2.0 to 3.2. If your GPU only supports 3.1, then you'll have to play versions prior to Release 1.17.
+
+Could there be a mod that will fix the problem? Maybe, as long as they don't ask you to put a random .dll in a system folder or similar things you should be fine.
+
+:::
+
+## I get a Crash Report that says: Report was empty
+Since the report is empty, it would be ideal if you share the [logs in debug mode](/faq/uncategorized#where-are-the-logs-located).\
+This way the problem could be reported to the developer and never happen again.
+
+It seems that this happens since dGPU usage can be forced from the launcher settings, so the solution would be: [disable use dGPU](/faq/game-related#how-to-change-the-gpu-used-in-the-game) (Option A - But Disable!)\
+But others also say it's related to GPU drivers, so it would be doing the 3 points of the [above problem](#game-doesnt-start-due-to-glfw-opengl-ig7icd64dll-or-atio6axxdll-error).
+
+:::note
+
+If only disabling the use dGPU option solved the problem, it would be very good if you re-enable it and send the [logs in debug mode](/faq/uncategorized#where-are-the-logs-located) so that the problem can be solved permanently.
+
+:::
+
+## Release 1.13 and above doesn't launch on Linux x86 (32-bits)
+The Minecraft engine (LWJGL) has dropped Linux x86 support in LWJGL 3, so play older versions or install Linux x64 (64-bits).
+
+## Invalid signature for profile public key
+Since the error is possible for both Microsoft and Offline accounts...
+
+### Microsoft accounts
+- Check that there are no problems in the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status).
+- Follow the error message and restart the game and launcher (it may even be useful to log out and log back in).
+
+### Offline accounts
+- The server you're trying to connect to only allows players with a public key signed by Mojang (`enforce-secure-profile=true`).
+    - If it's your server, then set `enforce-secure-profile=false` in your `server.properties` file and restart the server.
+
+## Failed to login: Invalid session
+Since the error is possible for both Microsoft and Offline accounts...
+
+### Microsoft accounts
+- Check that there are no problems in the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status).
+- Follow the error message and restart the game and launcher (it may even be useful to log out and log back in).
+
+### Offline accounts
+- The server you're trying to connect to is for Online (Microsoft) accounts (`online-mode=true`).
+    - If it's your server, then set `online-mode=false` in your `server.properties` file and restart the server.
+- It could also be that a Microsoft account already joined that server and your Offline account has the same name. In that case you'll have to change your name to one that doesn't exist (you can check it in [NameMC](https://namemc.com/) / [MCChecker](https://mcchecker.net/)).
