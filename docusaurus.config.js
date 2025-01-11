@@ -19,6 +19,10 @@ const config = {
   organizationName: 'sklauncher', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
+  future: {
+    experimental_faster: true,
+  },
+
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
@@ -77,7 +81,7 @@ const config = {
             items: [
               {
                 label: 'Introduction',
-                to: '/docs/intro',
+                to: '/',
               },
             ],
           },

@@ -1,6 +1,6 @@
 {
-  "position": 7,
-  "label": "Contributions",
+  "position": 3,
+  "label": "Features",
   "collapsible": false,
   "link": {
     "type": "generated-index"
