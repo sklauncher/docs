@@ -1,0 +1,42 @@
+---
+slug: /getting-started/login/microsoft
+title: Microsoft login
+unlisted: true
+---
+
+:::info
+
+This option is *only for users* who have *Minecraft: Java Edition* **[purchased](/faq/launcher-related#where-can-i-buy-the-game)**.\
+In addition those users **had to create an user** when using *[Minecraft Launcher](https://www.minecraft.net/en-us/download)* ([alternative](https://www.minecraft.net/en-us/download/alternative)) at *least once*.
+
+:::
+
+## Login
+1. Run SKlauncher and click the "Login with Microsoft" button.
+2. Your default browser will open an official Microsoft login page for you to sign in with your account (make sure it's the one that has Minecraft: Java Edition purchased).
+3. In a moment it will ask you if you want to allow an app (ReLogin) and you must do it.
+4. When the whole process is finished, you will be redirected to a local page saying that you can now close your browser (do it).
+5. If everything is ok, you will see that you are logged in to SKlauncher with your Microsoft account.
+
+## Common questions
+
+### What is ReLogin, is it dangerous?
+It's a generic Microsoft Azure application where you do the OAuth 2.0 authentication flow to get the access token so you can play (like any launcher would do....in a nutshell and in simple terms).
+
+> On 30th August 2024 for a few hours we switched from using *ReLogin* to *Auth Me for Minecraft*. In the end it was switched back to ReLogin because it wasn't a necessary change.\
+> This is noted in case you see that App when you visit [Microsoft - Manage applications](https://account.live.com/consent/Manage).
+
+So no, it's not dangerous. Obviously don't push your luck and publish your access token or your refresh token.\
+If you think you've leaked any, you can always manually invalidate them:\
+\- The refresh token when you remove ReLogin.\
+\- The access token when you change your Microsoft password.
+
+### What data does SKlauncher store about my Microsoft account?
+From the Launcher: Google Analytics data.\
+About your Microsoft account: Absolutely nothing.
+
+## Common issues
+
+### Couldn't log in / Profile not found
+Read the error message and do what it says, but if that doesn't help you can always [ask for help in Discord](https://skmedix.pl/discord) explaining the problem (and sending the log by clicking on <u>Open Log</u>).\
+This is assuming that the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status) isn't down and that you followed the info at the top of this page (if both are ok, you can try restarting the launcher and try again).

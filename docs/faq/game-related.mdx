@@ -1,0 +1,47 @@
+---
+title: Game related
+description: Questions about Minecraft - Java Edition (the game)
+sidebar_position: 3
+---
+
+## How to change the GPU used in the game?
+Your Dedicated GPU (dGPU) is more powerful than your Integrated GPU (iGPU). Sometimes it can happen that Windows decides to use iGPU for Minecraft, which significantly degrades the game's performance. Here's how to fix that.
+
+:::warning
+
+Use one of the options at a time, not all together!\
+Option B implies that you disabled Option A, and Option C only applies if Option B is not configured.
+
+And obviously apply these changes with the game closed.
+
+:::
+
+### Option A: Force dGPU from the Launcher settings
+1. Start the launcher and go to *Launcher Settings*
+2. Enable the *Use Dedicated GPU* option
+3. Start the game
+
+You'll see that the game now uses *MinecraftJava.exe* instead of *javaw.exe*
+
+### Option B: Force dGPU from the Windows settings
+1. Follow [this](https://www.youtube.com/watch?v=b-skXHedB78) video or go to Settings -> System -> Display -> Graphics settings
+2. You'll see a section that says *Graphics performance preference*, click on browse and look for *javaw.exe*
+3. Click add, select *Max performance* for your GPU and click OK
+
+If you don't know which javaw.exe to select: Start the game -> Then minimize -> Open the Task Manager look for the Java process -> Right click -> Open location and the file that it will show you is the javaw.exe you need to select in step 2
+
+### Option C: Force dGPU from your GPU Control Panel
+:::note
+
+Intel doesn't seem to have an option for this, so you'll have to use Option B. AMD seems to but it's not very clear and finally Nvidia that we do have an explanation to give.
+
+PS: If you don't know which javaw.exe to select: Start the game -> Then minimize -> Open the Task Manager look for the Java process -> Right click -> Open location and the file that it will show you is the javaw.exe you need to select in step 4
+
+:::
+
+1. Press <kbd>Windows</kbd> + <kbd>S</kbd> to open the search bar and search for *NVIDIA Control Panel* (open it)
+2. Select *Manage 3D Settings* -> Select the *Global settings* tab
+3. Click on the *Preferred graphics processor* option -> Select *High-performance Nvidia processor*
+4. Go to the *Program Settings* tab -> Click on the *Add* button -> Find/Browse on the Add window -> Choose the *javaw.exe* file you found in the Note
+5. Choose the *High-performance Nvidia processor* option from the menu
+6. Click *Apply* for changes
