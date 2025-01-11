@@ -2,15 +2,54 @@
 title: Installing Fabric
 ---
 
-:::info TODO
+:::danger
 
-This document is a work in progress. Please help us improve it by contributing!
+Always download mods from trusted sources as they may cause harm to your operating system.
 
 :::
 
-Thanks to SKlauncher 3.1 installing Fabric is a really quick and simple process. Here's what you will need to do to install it:
+## Installing Fabric
 
-1. Go to the **Installations Manager** and create a new installation.
-2. In the version chooser select **Fabric** and choose desired Minecraft version.
-3. Customize the installation to your liking and save it.
-4. Done!
+Thanks to SKlauncher installing Fabric is a really quick and simple process. Here's what you will need to do to install it:
+
+1. Open **SKlauncher**.
+2. Click on the **Installations Manager** tab in the left menu.
+3. Click the **New Installation** button.
+4. In the **Create new installation** window:
+	- Give your installation a name (e.g., "Fabric 1.21.1").
+	- From the list of version types select **Fabric**.
+	- Choose your desired Minecraft and Fabric Loader versions.
+5. (Optional) Customize other settings if desired:
+	- Select (or add custom) an Icon for your new installation
+	- Change the game directory.
+	- Under **More Options** dropdown menu:
+		- Adjust memory allocation
+		- Modify Java arguments
+		- Modify launcher visibility
+6. Click **Save** to create the new Fabric installation.
+
+## Installing Fabric API
+
+Fabric API is essential for many Fabric mods. You can get it from either CurseForge or Modrinth.
+
+1. Download Fabric API from [Modrinth](https://modrinth.com/mod/fabric-api/versions) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api/files).
+2. Find the Fabric API version that matches your Minecraft and Fabric Loader version.
+3. Download the .jar file.
+4. Open your **mods** folder.
+	- Windows: `%appdata%\.minecraft\mods\`
+	- macOS: `~/Library/Application Support/minecraft/mods/`
+	- Linux: `~/.minecraft/mods/`
+	- If the 'mods' folder doesn't exist, create it.
+5. Place the downloaded file into the **mods** folder.
+
+## Launching Fabric
+1. Return to the main SKlauncher window.
+2. In the sidebar, select your newly created Fabric installation.
+3. Click "Play" to launch Minecraft with Fabric.
+
+You're now ready to use Fabric mods!
+
+## Troubleshooting
+- If you encounter any issues, make sure Fabric, Fabric API and the mods you have installed are compatible with your Minecraft version.
+- Some mods may require additional dependencies. Always read the mod's documentation for specific installation instructions.
+- If a mod isn't working, check the game's log for any error messages that might provide more information.
