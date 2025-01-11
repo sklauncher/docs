@@ -95,16 +95,25 @@ Yes, it will work. SKlauncher downloads the game's version of Java, so you can u
 SKlauncher is built with JavaFX, which may not be included in Java 8 by default. So you need to install Java 8 with JavaFX or Java 21.
 
 ### Can I NOT install Java?
-Yes, but you will need to understand 2 things:
-1. You will need to use the extractable version of Java (usually .zip for Windows and .tar.gz for Linux and Mac OS).
-2. You will need to run SKlauncher (.jar version) via commands (for example `java -jar SKlauncher.jar`).
+Yes, but this requires:
+1. Using a portable Java distribution:
+    - Windows: .zip format
+    - Linux / macOS: .tar.gz format
+2. Running SKlauncher via command line: `java -jar SKlauncher.jar`
 
-And you will need to have a minimum of knowledge about understanding your working directory, relative/absolute paths, using "quotes" if that path has spaces in it (or some specific character), etc.
+:::note
+
+This approach requires basic knowledge of:
+- Working directories.
+- Relative / absolute paths.
+- Using "quotes" for paths with spaces.
 
 <small>
     For example, this is what it would be like to run SKlauncher via CMD commands in Windows when my working directory is the Downloads folder:\
     `"jdk-21.0.5+11\bin\java.exe" -jar SKlauncher.jar`
 </small>
+
+:::
 
 ### Can I install SKlauncher in another folder?
 Of course! But the full answer on how to do it is [here](/faq/launcher-related#can-i-install-sklauncher-in-another-folder).
