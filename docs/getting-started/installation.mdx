@@ -38,7 +38,11 @@ Install Java 21 using your distribution's package manager. Here are instructions
 sudo apt update
 sudo apt install openjdk-21-jdk
 ```
-Note: If you get the error ```E: Unable to locate package openjdk-21-jdk``` you may need to configure Debian's APT repository and then run ```sudo apt update```. 
+:::note
+
+If you are using Debian and got the error ```E: Unable to locate package openjdk-21-jdk```, you may need to [upgrade to Debian Testing](https://wiki.debian.org/DebianTesting#How_to_upgrade_to_Debian_.28next-stable.29_Testing) or use an older Java version, such as ```openjdk-17-jdk```.
+
+:::
 
 ##### Fedora:
 ```
