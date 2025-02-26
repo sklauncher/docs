@@ -7,17 +7,10 @@ sidebar_position: 1
 To download and run SKlauncher, you will need to follow these simple steps:
 
 ## Downloading
-
-:::caution
-
-SKlauncher currently doesn't have an installer for Windows, or any other operating system.
-
-:::
-
 1. Download the latest version of SKlauncher from [here](https://skmedix.pl/downloads).
 2. Select the version of SKlauncher that is compatible with your operating system
-    - If you are using Windows, download the .exe file
-    - If you are using Linux or macOS, download the .jar file
+    - If you are using Windows, download the setup file
+    - If you are using Linux or macOS, download the DMG file
 3. Follow the instructions to [install SKlauncher](/getting-started/install)
 
 ## Common questions
@@ -26,9 +19,21 @@ Some users may have some questions before or after downloading, we'll see the ma
 ### Can I use the .jar in Windows?
 Of course!
 
-### What's the difference between .exe and .jar?
-The .exe is the .jar converted to .exe using Exe4j, so the only difference is that the .exe will give you an error message if you don't have Java installed/updated (and a nice icon).\
+### What's the difference between all the download options?
+On Windows, you have 3 options; the Setup, Jar, and the Exe.\
+The Windows setup is a new addition and is the recommended way to install the launcher. With the setup, 
+no other installations are necessary. The setup downloads all the required files including the JRE and JavaFX for you. It is also [open source.](https://github.com/sklauncher/installer)\
+The .jar requires a JRE (Eclipse Adoptium 21 recommended) to run. It's also **portable**, meaning it can be run from any directory.\
+The portable .exe is the .jar converted to .exe using Exe4j, so the only difference is that the .exe will give you an error message if you don't have Java installed/updated (and a nice icon).\
 It can be said that it's to simplify things for Windows users.
+
+On macOS, you also have 3 options; the DMG, Jar, and .app\
+The DMG and the .app are mostly the same thing and both require Java to work. The DMG requires you to drag it into the Applications 
+folder to work.\
+The Jar also needs Java to run.
+
+On Linux you only have the option for a Jar download, which requires Java to run.\
+Flatpak will be released in the future.
 
 ### Is it a virus?
 Visit [this](/virus) link for more information, since this is a very complex question to be simplified and answered in simple terms.\
