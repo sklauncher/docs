@@ -16,7 +16,7 @@ Always download mods/shaderpacks from trusted sources, otherwise they may cause 
 
 :::caution
 
-Shaders usually require powerful hardware to run smoothly, such as a powerful GPU and a decent CPU. Otherwise your game will run terribly with low framerates 
+Shaders usually require powerful hardware to run smoothly, such as a powerful GPU and a decent CPU. Otherwise your game will run terribly with low framerates
 or significant **lag spikes.**
 
 :::
@@ -25,19 +25,19 @@ This guide will cover how to install and use shaders in Minecraft; but it should
 different shader mods, which are built for different mod loaders. This guide will cover the common ways to install shaders.
 
 ## Installing shaders through Iris
-Iris is a shader mod designed to work with all existing [Optifine](/modding/optifine.mdx) shaders. It can be installed 
+Iris is a shader mod designed to work with all existing [OptiFine](/modding/optifine.mdx) shaders. It can be installed
 as a seperate profile or a standalone [Fabric](/modding/fabric.mdx), [Quilt](/modding/quilt.mdx), and [NeoForge](/modding/neoforge.mdx) mod.
 
 ### Installing Iris through the Installer
 Note: This option installs [Sodium](https://modrinth.com/mod/sodium) alongside Iris.
 
-1. Start by heading over to the [official Iris website](https://www.irisshaders.dev/download) and downloading the Iris installer. 
+1. Start by heading over to the [official Iris website](https://www.irisshaders.dev/download) and downloading the Iris installer.
 2. Run the installer and click Download.
 3. An Iris profile will now show up on the left sidebar in SKlauncher; you may need to restart the launcher if it doesn't show up.
 4. You can now move on to downloading shaders.
 
 ### Installing the Iris mod
-Note: You will need one of 3 mod loaders for this option; [Fabric](/modding/fabric.mdx), [Quilt](/modding/quilt.mdx), or [NeoForge](/modding/neoforge.mdx).  
+Note: You will need one of 3 mod loaders for this option: [Fabric](/modding/fabric.mdx), [Quilt](/modding/quilt.mdx), or [NeoForge](/modding/neoforge.mdx).
 It doesn't matter which one you use unless you plan on using other mods alongside shaders.
 
 1. Head over to the Iris mod download page on [Modrinth](https://modrinth.com/mod/iris).
@@ -47,44 +47,34 @@ It doesn't matter which one you use unless you plan on using other mods alongsid
 5. You can now move on to downloading shaders.
 
 ### Installing Iris shaders
-You can find shaders for Iris on many websites, but it is **always** advised to get them from trusted sources, 
+You can find shaders for Iris on many websites, but it is **always** advised to get them from trusted sources,
 such as [Modrinth](https://modrinth.com/shaders?g=categories:iris) or [Curseforge](https://www.curseforge.com/minecraft/search?class=shaders).
 
 1. Start by downloading the correct shaders from Modrinth, Curseforge, or any trusted site.
+    - IMPORTANT: Shaderpacks are usually downloaded as a ZIP archive (`.zip`). It is important that you do not extract it, otherwise the shaderpack will not work. On macOS, it may be downloaded a folder, and in that case, simply compress the folder.
 
-IMPORTANT: Shaderpacks are usually downloaded as a ZIP archive (`.zip`). It is important that you do not extract it, otherwise the shaderpack 
-will not work. On macOS, it may be downloaded a folder, and in that case, simply compress the folder.
+2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft folder. If there isn't one, create one.
+    - On Windows this is `%APPDATA%\.minecraft\shaderpacks`
+    - On Linux this is `~/.minecraft/shaderpacks`
+    - On macOS this is `~/Library/Application Support/minecraft/shaderpacks`
 
-2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft folder. If there isn't one, create one. 
-
-On Windows it's `%AppData%/.minecraft/shaderpacks`
-
-On macOS it's `~/Library/Application Support/Minecraft/Shaderpacks`
-
-On GNU/Linux it's `~/Minecraft/shaderpacks`
-
-3. Launch your Iris installation if you installed Iris + Sodium, or launch your mod loader if you got the Iris mod. 
+3. Launch your Iris installation if you installed Iris + Sodium, or launch your mod loader if you got the Iris mod.
 4. Once you're in the Minecraft main menu, you can now go to `Options > Video Settings > Shader packs` and select your shader pack.
 5. You're done! If you followed the steps correctly, your shaders should work! You can tweak some settings to improve performance.
 
 ## Installing shaders through OptiFine
-Optifine is a performance-boosting and shader mod that uses OptiFine Shaders, you can install Optifine as a seperate profile or as a Forge mod.
+OptiFine is a performance-boosting and shader mod that uses OptiFine Shaders, you can install OptiFine as a seperate profile or as a Forge mod.
 
 ### Installing OptiFine shaders
 All you need is OptiFine to use OptiFine shaders. Follow [this guide](/modding/optifine.mdx) to learn how to install it.
 
 1. You can download the correct shaders for OptiFine through a trusted site such as [Modrinth](https://modrinth.com/shaders?g=categories:optifine) or [Curseforge](https://www.curseforge.com/minecraft/search?class=shaders).
+    - IMPORTANT: Shaderpacks are usually downloaded as a ZIP archive (`.zip`). It is important that you do not extract it, otherwise the shaderpack will not work. On macOS, it may be downloaded a folder, and in that case, simply compress the folder.
 
-IMPORTANT: Shaderpacks are usually downloaded as a ZIP archive (`.zip`). It is important that you do not extract it, otherwise the shaderpack 
-will not work. On macOS, it may be downloaded a folder, and in that case, simply compress the folder.
-
-2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft folder. If there isn't one, create one. 
-
-On Windows it's `%AppData%/.minecraft/shaderpacks`
-
-On macOS it's `~/Library/Application Support/Minecraft/Shaderpacks`
-
-On GNU/Linux it's `~/Minecraft/shaderpacks`
+2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft folder. If there isn't one, create one.
+    - On Windows this is `%APPDATA%\.minecraft\shaderpacks`
+    - On Linux this is `~/.minecraft/shaderpacks`
+    - On macOS this is `~/Library/Application Support/minecraft/shaderpacks`
 
 3. Launch your OptiFine installation or Forge installation with the OptiFine mod.
 4. Once you're in the Minecraft main menu, you can now go to `Options > Video Settings > Shaders...` and select your shader pack.
@@ -97,18 +87,18 @@ It's not rare to run into issues while trying to run shaders. The next part will
 ### Laggy game
 This is a very common issue and there's many causes for this.
 
-1. Weak hardware: Shaders are very resource intensive and usually need a good GPU to run smoothly. If you do have good hardware and your game 
-is lagging it could be because Minecraft is using your iGPU (integrated GPU) instead of your dGPU (dedicated GPU). You can learn how to solve 
-that [here](/docs/faq/game-related.mdx/#how-to-change-the-gpu-used-in-the-game). 
-2. High settings: Your shaders may be set to High settings which use require more graphical processing power. You can lower your shader 
+1. Weak hardware: Shaders are very resource intensive and usually need a good GPU to run smoothly. If you do have good hardware and your game
+is lagging it could be because Minecraft is using your iGPU (integrated GPU) instead of your dGPU (dedicated GPU). You can learn how to solve
+that [here](/faq/game-related#how-to-change-the-gpu-used-in-the-game).
+2. High settings: Your shaders may be set to High settings which use require more graphical processing power. You can lower your shader
 settings by going to `Options > Video Settings > Shaders... > Shader Settings` on OptiFine and `Options > Video Settings > Shader Packs > Shader Pack Settings` on Iris.
 
 ### My game just crashed
 This can be caused by multiple factors, such as incompatible mods, drivers, etc.
 
-1. If you have other mods, a conflicting mod could be causing the issue. Read the crashlog to find out what mod is causing it. You may also have 
+1. If you have other mods, a conflicting mod could be causing the issue. Read the crashlog to find out what mod is causing it. You may also have
 gotten the wrong version of a mod.
 
 ### Need more help?
-1. You can read the [troubleshooting guide](/troubleshooting/) or...
+1. You can read the [troubleshooting guide](/category/troubleshooting) or...
 2. You can ask the SKlauncher community for help! Join the [Discord server](https://skmedix.pl/discord) if you're stuck and need guidance!
