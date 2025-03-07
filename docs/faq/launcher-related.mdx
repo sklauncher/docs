@@ -21,8 +21,9 @@ Copy that path according to your OS into the folder address bar to go to that lo
 
 :::info
 
-This is actually where Minecraft: Java Edition is ~~installed~~ downloaded. Since SKlauncher doesn't have an installer yet, it's just:\
+This is actually where Minecraft: Java Edition is ~~installed~~ downloaded. SKlauncher specific files and folders are:\
 \- `\java` (you may find it, but it's useless for you)\
+\- `\sklauncher` (only for Windows in case you've used the Installer)\
 \- `\.minecraft\sklauncher`\
 \- `\.minecraft\sklauncher-fx.jar`\
 \- *The SKlauncher.exe/.jar you downloaded*
@@ -93,9 +94,14 @@ Visit [this](/virus) link for more information, since this is a very complex que
 If you want something short: No! SKlauncher never had, doesn't have and never will have viruses!
 
 ## Is SKlauncher open source?
-Not at the moment, but there are plans for it to be in the future. However the code code isn't obfuscated, so you could decompile it and verify everything for yourself.
+The actual launcher isn't open source at the moment, but there are plans for it to be in the future. However the code code isn't obfuscated, so you could decompile it and verify everything for yourself.\
+Meanwhile, the Windows Installer is open source and you can find its repository [here](https://github.com/sklauncher/installer).
 
-> We would like to go open-source in 2024, but it's not so simple. Many parts of the launcher is not ready for foss, but I would love to make it foss. When I started this project I never intended it to be open-source as you need some sacrifices for it, and back then most of the projects weren't open-source, and a lot still isn't. Just look for paid plugins on spigot, it's closed source and even obfuscated. Does sticking a price makes it safe? No. But yes, java is fully decompilable, and you can read the code pretty close to the original (unless it's obfuscated), there are some launchers that are open-source, there are launchers that are closed source, and bruh, there are launchers that are open source where the source is obfuscated, so it's not really open source. But here you can read the source, while the licenses doesn't allow you to just clone the launcher for your needs. I wouldn't like to see my work where someone just changed it's name and logo, but's thats the price of being open source\
+> We would like to go open-source in 2024, but it's not so simple. Many parts of the launcher is not ready for foss, but I would love to make it foss. When I started this project I never intended it to be open-source as you need some sacrifices for it,
+and back then most of the projects weren't open-source, and a lot still isn't.
+Just look for paid plugins on spigot, it's closed source and even obfuscated. Does sticking a price makes it safe? No. But yes, java is fully decompilable, and you can read the code pretty close to the original (unless it's obfuscated),
+there are some launchers that are open-source, there are launchers that are closed source, and bruh, there are launchers that are open source where the source is obfuscated, so it's not really open source. But here you can read the source, while the licenses doesn't allow you to just clone the launcher for your needs.
+I wouldn't like to see my work where someone just changed it's name and logo, but's thats the price of being open source\
 > \- [Link to message](https://discord.com/channels/141669825129873409/290149381548670976/1191138312392552448)
 
 PS: Open source doesn't equal security. Not only the platform (GitHub for example) won't warn you "Hey, there's something dangerous here!" but you end up with a false security believing "someone else already checked it".
@@ -157,7 +163,12 @@ This way you can try any Java you want without any problems, because maybe the J
 :::
 
 ## How to uninstall SKlauncher?
-Read [this](#where-is-sklauncher-installed) question and delete the mentioned files/folders that are from SKlauncher and you're done.\
+If you got the launcher through the Setup on Windows, you can follow one of these 3 methods:
+1. Open Control Panel > Programs & Features > Uninstall or change a program > Choose SKlauncher from your programs list.
+2. Open Settings (Windows 10/11) > Apps > Installed Apps > Choose SKlauncher from the app list.
+3. Navigate to `%APPDATA%\sklauncher` and run the `unins000.exe` file located within that directory.
+
+If you got the launcher through .jar, .app or any of the other ways, follow [this](#where-is-sklauncher-installed) question and delete the mentioned files/folders that are from SKlauncher and you're done.\
 Or also the .minecraft folder, but that's deleting the whole game (including your worlds, mods and resource packs) and not just SKlauncher.
 
 If your idea is to delete absolutely everything, also uninstall Java.\
