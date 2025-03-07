@@ -173,3 +173,60 @@ Or also the .minecraft folder, but that's deleting the whole game (including you
 
 If your idea is to delete absolutely everything, also uninstall Java.\
 And after all that restart the PC, so you can say that you have "deleted all traces" of Java, SKlauncher and Minecraft: Java Edition.
+
+## Where are the logs located?
+The logs about the launcher will always be [where you have .minecraft](#where-is-sklauncher-installed), but the logs about the game will be [where you have your game directory](#how-does-game-directory-work).
+
+- Launcher: `.minecraft\sklauncher\sklauncher_logs.txt`
+- Game: `.minecraft\logs\latest.log` and `.minecraft\crash-reports\crash-YYYY-MM-DD_HH.MM.SS-client.txt`
+
+:::tip
+
+You can copy the logs content and paste it in [mclo.gs](https://mclo.gs/), this way you send a link instead of a huge message.\
+Or [upload the files](https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ#h_01J4M00QYZTXY5FV9KDWT05H5T) directly to Discord.
+
+PS: It might be good to read what the launcher shows you, because if your game crashes and the launcher shows again telling you just that: at the top right you will have 2 buttons, where one of them is to give you the link to the report.
+
+:::
+
+### Debug mode
+Sometimes you need the logs to show even more information to find the cause of the problem.
+
+:::warning
+
+You should do this *only if requested to do it* and **after that revert the changes**.
+
+:::
+
+:::danger
+
+Be careful with the **exposed data**!\
+Debug logs may contain sensitive information including:
+- Access tokens and session IDs
+- IP addresses and connection details
+
+Using **[mclo.gs](https://mclo.gs/)** is recommended, **as it automatically censors sensitive data** such as the **access token** (a concern if you're using Microsoft login).\
+But this would only matter to you for the *If you can't start the game or there is a problem inside it...* part.
+
+:::
+
+#### If you can't even reach the launcher...
+1. [Download](/getting-started/downloads#downloading) the SKlauncher in its .jar version and then start it by Terminal commands: `java -jar SKlauncher.jar`
+2. Copy the entire contents of the console and paste it into the Discord chat (when it ends or seems to do nothing more).
+
+#### If you can't start the game or there is a problem inside it...
+1. Start the launcher, go to *Launcher Settings* and enable the *Show Launcher Console* option. Then you'll see that a new tab has been added to the main screen: Launcher Log. Click on it so you can see the logs so far.
+2. Edit the installation you're having problems with. Then you must edit in the "More Options" section the following:
+    - Launcher Visibility: *Keep the launcher open and show game output*
+    - JVM Arguments: Add at the end `-Xdiag -Dsklauncher.debug=true` (remember there is space between arguments, so first add a space before pasting this)
+3. After that you start the game and you'll see the Game Output window and that's it. Reproduce again the problem you're having and send everything.
+
+:::info
+
+- The *Launcher Log* tab is the same as the Launcher log file.
+- The *Game Output* window looks like the same as sending both Game logs files, but with a bit more information at the beginning (so sending the content of this window should be more than enough).
+
+:::
+
+## Need more help?
+If your question about the launcher isn't covered here, check the [Web related FAQ](/faq/web-related#need-more-help) section for information on how to get additional help through Discord or online resources.
