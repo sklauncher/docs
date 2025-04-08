@@ -4,6 +4,9 @@ title: Installation
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Windows Setup
 If you got the setup (installer) for Windows, you only have to run the installer and follow the installation steps in the setup.\
 If you're already familiar with Windows setup files then this should be simple.
@@ -15,8 +18,7 @@ The installation steps within the installer are:
 4. Completing the SKlauncher 3.2 Setup Wizard: Once you're here, just click on Finish.
 
 ## Java Requirements
-For a long time, SKlauncher required Java 8 with JavaFX, but this is no longer the case.
-Now you can use any version of Java above 11. We recommend using the LTS (Long-term support) version, which is currently Java 21.
+For a long time, SKlauncher required Java 8 with JavaFX, but this is no longer the case. Now you can use the latest LTS (Long-term support), which is currently Java 21.
 
 :::danger
 
@@ -29,40 +31,47 @@ Java is only necessary if you are going to use the portable .exe, .jar, .dmg or 
 
 ### Java 21 (Recommended)
 
-#### Windows
-1. Go to [Adoptium](https://adoptium.net/) and click on the **Latest LTS Release** button.
-2. Run the installer and follow the instructions.
-3. In the *Custom Setup* screen, make sure to select the following options:
-    - Add to PATH
-    - Associate .jar
-    - Set JAVA_HOME variable
-    - JavaSoft (Oracle) registry key
-4. Click **Next**, then **Install**.
-5. Wait for the installation to finish, then click **Finish**.
+<Tabs groupId="operating-systems">
 
-#### Linux
-Install Java 21 using your distribution's package manager. Here are instructions for some common distributions:
+  <TabItem value="Windows" label="Windows" default>
 
-##### Ubuntu/Debian:
-```
-sudo apt update
-sudo apt install openjdk-21-jdk
-```
-:::note
+    1. Go to [Adoptium](https://adoptium.net/) and click on the **Latest LTS Release** button.
+    2. Run the installer and follow the instructions.
+    3. In the *Custom Setup* screen, make sure to select the following options:
+        - Add to PATH
+        - Associate .jar
+        - Set JAVA_HOME variable
+        - JavaSoft (Oracle) registry key
+    4. Click **Next**, then **Install**.
+    5. Wait for the installation to finish, then click **Finish**.
 
-If you are using Debian and got the error ```E: Unable to locate package openjdk-21-jdk```, you may need to [upgrade to Debian Testing](https://wiki.debian.org/DebianTesting#How_to_upgrade_to_Debian_.28next-stable.29_Testing) or use an older Java version, such as ```openjdk-17-jdk```.
+  </TabItem>
 
-:::
+  <TabItem value="Linux" label="Linux">
 
-##### Fedora:
-```
-sudo dnf install java-21-openjdk
-```
+    There are many different Distros, so you may want to visit the [Adoptium guide](https://adoptium.net/installation/) or search on [Google](https://www.google.com/).
 
-##### Arch Linux:
-```
-sudo pacman -S jdk21-openjdk
-```
+    1. Open your Terminal and then update the package list according to your OS:
+        - Debian or Ubuntu: `sudo apt-get update`
+        - CentOS/RHEL/Fedora: `sudo yum update`
+        - openSUSE/SLES: `sudo zypper refresh`
+    2. Install Java 21 according to your OS:
+        - Debian or Ubuntu: `sudo apt-get install temurin-21-jdk`
+        - CentOS/RHEL/Fedora: `sudo yum install temurin-21-jdk`
+        - openSUSE/SLES: `sudo zypper install temurin-21-jdk`
+    3. If everything went well, you can now try this command `java -version` and get Java 21 (as well as other things).
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    1. Go to [Adoptium](https://adoptium.net/) and click on the **Latest LTS Release** button.
+    2. Run the installer or drag the icon to your Application folder and follow the instructions.
+    3. Wait for the installation to finish, then click **Close**.
+
+  </TabItem>
+
+</Tabs>
 
 ### Java 8 with JavaFX
 
@@ -72,34 +81,112 @@ Sometimes your Java 8 may be too old to run SKlauncher. In this case, you need t
 
 :::
 
-If you can't use Java 21, you can use Java 8 with JavaFX. We recommend using either:
-- [Oracle Java 8](https://www.java.com/en/download/)
-- [Liberica 8 Full JDK](https://bell-sw.com/pages/downloads/#jdk-8-lts)
+<Tabs groupId="operating-systems">
+
+  <TabItem value="Windows" label="Windows" default>
+
+    1. Go to [Liberica](https://bell-sw.com/pages/downloads/#jdk-8-lts), scroll down until you see the different options and look for Windows. You have to click on **Package** and select **Full JDK**, then you can download the one that says **MSI**.
+    2. Run the installer and follow the instructions.
+    3. In the *Custom Setup* screen, make sure to select the following options *(should be selected by default)*:
+        - Add to PATH
+        - Associate .jar
+        - Set JAVA_HOME variable
+        - JavaSoft (Oracle) registry key
+    4. Click **Next**, then **Install**.
+    5. Wait for the installation to finish, then click **Finish**.
+
+  </TabItem>
+
+  <TabItem value="Linux" label="Linux">
+
+    There are many different Distros, so you may want to visit the [Liberica guide](https://bell-sw.com/pages/downloads/#jdk-8-lts)\* or search on [Google](https://www.google.com/).\
+    <small>\* - Scroll down until you see the different options and look for the *Installation guide* link. Or use [this](https://docs.bell-sw.com/liberica-jdk/8u442b7/general/install-guide/#linux) link and keep in mind that you are viewing a specific version of Java 8 and not its latest update.</small>
+
+    1. Go to [Liberica](https://bell-sw.com/pages/downloads/#jdk-8-lts), scroll down until you see the different options and look for Linux. You have to click on **Package** and select **Full JDK**, then you can download the one that says **DEB** or **RPM** or the appropriate one for your OS.
+    2. Run the installer and follow the instructions.
+    3. Wait for the installation to finish, then click **Close**.
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    1. Go to [Liberica](https://bell-sw.com/pages/downloads/#jdk-8-lts), scroll down until you see the different options and look for macOS. You have to click on **Package** and select **Full JDK**, then you can download the one that says **PKG**.
+    2. Run the installer or drag the icon to your Application folder and follow the instructions.
+    3. Wait for the installation to finish, then click **Close**.
+
+  </TabItem>
+
+</Tabs>
 
 ## Running SKlauncher
 You don't need to [register](/getting-started/register) to try it, but when you see the "log in" screen we recommend you read the [Log in](/getting-started/login) guide to avoid headaches.
 
-### Windows
-If you didn't skip the Custom Setup screen, you can now run SKlauncher.
+<Tabs groupId="operating-systems">
 
-### Linux
-To run SKlauncher on Linux, use the following command in the Terminal:
+  <TabItem value="Windows" label="Windows" default>
 
-```
-java -jar SKlauncher.jar
-```
+    - Setup case:
+        - A shortcut has been created on your desktop named SKlauncher, so just start it.
+    - Other cases:
+        - If you didn't skip the Custom Setup screen, you can run the SKlauncher file you downloaded.
 
-Make sure you're in the directory containing the SKlauncher.jar\* file, or provide the full path to the file.
+  </TabItem>
 
-:::tip
+  <TabItem value="Linux" label="Linux">
 
-You may need to give it execute permissions first by typing `chmod +x SKlauncher.jar` (and maybe `755` instead of `+x`).
+    To run SKlauncher, use the following command in the Terminal:
 
-:::
+    ```
+    java -jar SKlauncher.jar
+    ```
 
-<small>\* - When downloading the name is in SKlauncher-version.jar format. Ideally, you should always rename it to SKlauncher in case you've to download it again (especially if you make a shortcut or script to launch it).</small>
+    Make sure you're in the directory containing the SKlauncher.jar\* file, or provide the full path to the file.
+
+    :::tip
+
+    You may need to give it execute permissions first by typing `chmod +x SKlauncher.jar` (and maybe `755` instead of `+x`).
+
+    :::
+
+    <small>\* - When downloading the name is in SKlauncher-version.jar format. Ideally, you should always rename it to SKlauncher in case you've to download it again (especially if you make a shortcut or script to launch it).</small>
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    - .dmg and .app case:
+        - You should see SKlauncher in your Launchpad, so you start it from there.
+    - Other cases:
+        - Use the following command in the Terminal: `java -jar SKlauncher.jar`
+            - Make sure you're in the directory containing the SKlauncher.jar\* file, or provide the full path to the file.
+
+    :::tip
+
+    You may need to give it execute permissions first by typing `chmod +x SKlauncher.jar` (and maybe `755` instead of `+x`).
+
+    :::
+
+    <small>\* - When downloading the name is in SKlauncher-version.jar format. Ideally, you should always rename it to SKlauncher in case you've to download it again (especially if you make a shortcut or script to launch it).</small>
+
+  </TabItem>
+
+</Tabs>
 
 ## Common questions
+
+### What is the difference between Setup and Portable?
+Before Setup existed, here's what you had to do in a nutshell:
+- Download and Install Java
+- Download and Start SKlauncher (exe / jar)
+
+Now with the Setup, the same thing still happens but:
+- Java is downloaded (not installed)
+- JavaFX is downloaded (not installed)
+- It creates a shortcut, which if you check it says something like: `%APPDATA%\sklauncher\jre\bin\javaw.exe -Xmx512M -jar %APPDATA%\sklauncher\SKlauncher.jar`
+
+Is it a virus?
+- Since Setup is [open source](<https://github.com/sklauncher/installer>) and compiled from the same GitHub Actions, everything the documentation says [about it](/virus) still applies in the same way.
+- Did you know that for a simple change like [this](https://github.com/sklauncher/installer/commit/9c25564cfcc51aae11965ffc50bab7a52547cae3), VirusTotal went from 6 to 2 detections? So please, let's not have this talk every time the .exe (in this case Setup) is updated.
 
 ### I have Java X, but the game requires Java Y, will it work?
 Yes, it will work. SKlauncher downloads the game's version of Java, so you can use any version of Java on your computer. \*
@@ -145,8 +232,7 @@ It may be a good idea to restart the PC.
 :::
 
 ### I have Temurin 21 installed, but it still says that I don't have Java installed
-In this situation you probably skipped the *Custom Setup* screen. To fix this, you need to reinstall Java 21,
-and make sure to [follow the instructions](/getting-started/install#windows) in the *Custom Setup* screen.
+In this situation you probably skipped the *Custom Setup* screen. To fix this, you need to reinstall Java 21, and make sure to [follow the instructions](#java-21-recommended) (Windows tab) in the *Custom Setup* screen.
 
 ### I have Liberica 8 installed, but it still says that I don't have Java 8 with JavaFX
 In this situation you probably have Liberica 8 Standard Edition installed. To fix this, you need to install Liberica 8 Full JDK.
