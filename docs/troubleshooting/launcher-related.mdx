@@ -13,7 +13,42 @@ Before you start looking here, check the following pages first:
 :::
 
 ## Error: Unable to access jarfile when opening SKlauncher
-The path [where SKlauncher is installed](/faq/launcher-related#where-is-sklauncher-installed) contains special characters (like `?, !, ^, &, $`) or you put it in OneDrive.
+The path [where SKlauncher is installed](/faq/launcher-related#where-is-sklauncher-installed) contains special characters (like `?, !, ^, &, $`) or you put it in OneDrive.\
+Or the file (SKlauncher.jar if that's the name) is not actually in the folder from which you run the command.
+
+## Your username contains non-ASCII characters
+This is a problem only on Windows as Linux and macOS do not allow you to create a user with anything other than A-Z and 0-9 (alphanumeric, no accents, commas, etc).
+
+You have 2 possible options:\
+\-A- [Install in another folder](/faq/launcher-related#can-i-install-sklauncher-in-another-folder), something simple like `C:\Games\SKlauncher`.\
+\-B- Rename your user's folder, but it's advanced. Here is a guide for [Windows 10](https://www.tenforums.com/tutorials/89060-change-name-user-profile-folder-windows-10-a.html) / [Windows 11](https://www.elevenforum.com/t/change-name-of-user-profile-folder-in-windows-11.2133/).
+
+## Connection problems
+Maybe the website doesn't work for you, maybe you start the launcher but it says something like "Offline Mode - You're connected to the Internet" or it has some other error that seems related to the Internet connection.
+
+These problems are complicated because they can be:\
+\- You or your ISP's problem.\
+\- SKlauncher's problem.\
+\- External problem that none of you, your ISP or SKlauncher can solve.
+
+:::tip
+
+1. Close (or restart after doing a step) whatever is giving you connection error (browser / launcher / game).
+2. Do one step at a time and in order!
+
+:::
+
+1. Make sure you have not blocked Java in your Firewall (like [Windows Firewall](https://www.howtogeek.com/242375/how-to-troubleshoot-minecraft-lan-game-problems/#i-can-t-see-the-minecraft-game-on-the-lan)), you might see it as Java or OpenJDK.
+    - You can also delete everything related to Java / OpenJDK, so next time the Firewall prompts and you can click Allow.
+2. Check in [Time.is](https://time.is/) that your time is synced, otherwise you will have to adjust it.
+    - You can even change the NTP server by using [Google NTP](https://developers.google.com/time/guides), [Cloudflare NTP](https://developers.cloudflare.com/time-services/ntp/usage/) or [Pool NTP Project](https://www.ntppool.org/en/) and have your OS take care of keeping the time in sync (something that should be on default).
+3. Restart the Router and even the PC.
+4. Use [Google DNS](https://developers.google.com/speed/public-dns/docs/using) or [Cloudflare DNS](https://one.one.one.one/dns/), both links show you (scroll down) the IPv4 and IPv6 to use and even instructions on how to use them.
+    - After changing the DNS, it would be convenient to do an `ipconfig /flushdns` or its equivalent in your OS (this command is for Windows via CMD / PowerShell).
+5. Try using a VPN like [Cloudflare WARP](https://one.one.one.one/) or [Proton VPN](https://protonvpn.com/), where you should choose (if it allows it) the nearest country to yours (you will have to test it, since you may choose one that blocks or is blocked by the services you want to use).
+
+If after following each step and even step 6 is not a solution, it could be a problem where you can't do anything but wait.\
+You can also check the [Web related FAQ](/faq/web-related#need-more-help) section for information on how to get additional help through Discord or online resources.
 
 ## Launcher starts but closes or keeps loading forever
 1. Delete other launcher folders located in `.minecraft`
@@ -52,3 +87,6 @@ Edit the Client installation in the launcher and enable Compatibility Mode.
 
 ## Going into Friends tab on Hypixel hangs the game
 Edit the installation you're using in the launcher and enable Compatibility Mode.
+
+## Need more help?
+If your problem isn't covered here, check the [Web related FAQ](/faq/web-related#need-more-help) section for information on how to get additional help through Discord or online resources.
