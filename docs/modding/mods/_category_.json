@@ -1,0 +1,8 @@
+{
+  "position": 1,
+  "label": "Mods",
+  "collapsible": true,
+  "link": {
+    "type": "generated-index"
+  }
+}

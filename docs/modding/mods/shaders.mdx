@@ -25,8 +25,8 @@ This guide will cover how to install and use shaders in Minecraft; but it should
 different shader mods, which are built for different mod loaders. This guide will cover the common ways to install shaders.
 
 ## Installing shaders through Iris
-Iris is a shader mod designed to work with all existing [OptiFine](/modding/optifine.mdx) shaders. It can be installed
-as a seperate profile or a standalone [Fabric](/modding/fabric.mdx), [Quilt](/modding/quilt.mdx), and [NeoForge](/modding/neoforge.mdx) mod.
+Iris is a shader mod designed to work with all existing [OptiFine](/modding/mods/optifine.mdx) shaders. It can be installed
+as a seperate profile or a standalone [Fabric](/modding/mod-loaders/fabric.mdx), [Quilt](/modding/mod-loaders/quilt.mdx), and [NeoForge](/modding/mod-loaders/neoforge.mdx) mod.
 
 ### Installing Iris through the Installer
 Note: This option installs [Sodium](https://modrinth.com/mod/sodium) alongside Iris.
@@ -37,12 +37,13 @@ Note: This option installs [Sodium](https://modrinth.com/mod/sodium) alongside I
 4. You can now move on to downloading shaders.
 
 ### Installing the Iris mod
-Note: You will need one of 3 mod loaders for this option: [Fabric](/modding/fabric.mdx), [Quilt](/modding/quilt.mdx), or [NeoForge](/modding/neoforge.mdx).
+Note: You will need one of 3 mod loaders for this option: [Fabric](/modding/mod-loaders/fabric.mdx), [Quilt](/modding/mod-loaders/quilt.mdx), or [NeoForge](/modding/mod-loaders/neoforge.mdx).
 It doesn't matter which one you use unless you plan on using other mods alongside shaders.
 
 1. Head over to the Iris mod download page on [Modrinth](https://modrinth.com/mod/iris).
 2. Download the correct Iris mod for your mod loader and version. (i.e If you have Fabric 1.21.4 choose 1.21.4 as your version and Fabric as your platform)
-3. You must now place the Iris mod you downloaded in the `mods` folder, which is in your Minecraft folder. If there isn't a `mods` folder, create one.
+3. You must now place the Iris mod you downloaded in the `mods` folder, which is in your Minecraft\* folder. If there isn't a `mods` folder, create one.\
+<small>\* - If you modified your [game directory](/faq/launcher-related#how-does-game-directory-work), then you should look for `mods` folder in that location.</small>
 4. To use the Iris mod you must select your Fabric/Quilt/NeoForge installation in SKlauncher and launch it.
 5. You can now move on to downloading shaders.
 
@@ -53,10 +54,12 @@ such as [Modrinth](https://modrinth.com/shaders?g=categories:iris) or [Curseforg
 1. Start by downloading the correct shaders from Modrinth, Curseforge, or any trusted site.
     - IMPORTANT: Shaderpacks are usually downloaded as a ZIP archive (`.zip`). It is important that you do not extract it, otherwise the shaderpack will not work. On macOS, it may be downloaded as a folder, and in that case, simply compress the folder.
 
-2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft folder. If there isn't one, create one.
+2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft\* folder. If there isn't one, create one.
     - On Windows this is `%APPDATA%\.minecraft\shaderpacks`
     - On Linux this is `~/.minecraft/shaderpacks`
     - On macOS this is `~/Library/Application Support/minecraft/shaderpacks`
+
+    <small>\* - If you modified your [game directory](/faq/launcher-related#how-does-game-directory-work), then you should look for `shaderpacks` folder in that location.</small>
 
 3. Launch your Iris installation if you installed Iris + Sodium, or launch your mod loader if you got the Iris mod.
 4. Once you're in the Minecraft main menu, you can now go to `Options > Video Settings > Shader packs` and select your shader pack.
@@ -66,15 +69,17 @@ such as [Modrinth](https://modrinth.com/shaders?g=categories:iris) or [Curseforg
 OptiFine is a performance-boosting and shader mod that uses OptiFine Shaders, you can install OptiFine as a seperate profile or as a Forge mod.
 
 ### Installing OptiFine shaders
-All you need is OptiFine to use OptiFine shaders. Follow [this guide](/modding/optifine.mdx) to learn how to install it.
+All you need is OptiFine to use OptiFine shaders. Follow [this guide](/modding/mods/optifine.mdx) to learn how to install it.
 
 1. You can download the correct shaders for OptiFine through a trusted site such as [Modrinth](https://modrinth.com/shaders?g=categories:optifine) or [Curseforge](https://www.curseforge.com/minecraft/search?class=shaders).
     - IMPORTANT: Shaderpacks are usually downloaded as a ZIP archive (`.zip`). It is important that you do not extract it, otherwise the shaderpack will not work. On macOS, it may be downloaded as a folder, and in that case, simply compress the folder.
 
-2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft folder. If there isn't one, create one.
+2. You must now move the shaderpack.zip file you downloaded to the `shaderpacks` folder located in your Minecraft\* folder. If there isn't one, create one.
     - On Windows this is `%APPDATA%\.minecraft\shaderpacks`
     - On Linux this is `~/.minecraft/shaderpacks`
     - On macOS this is `~/Library/Application Support/minecraft/shaderpacks`
+
+    <small>\* - If you modified your [game directory](/faq/launcher-related#how-does-game-directory-work), then you should look for `shaderpacks` folder in that location.</small>
 
 3. Launch your OptiFine installation or Forge installation with the OptiFine mod.
 4. Once you're in the Minecraft main menu, you can now go to `Options > Video Settings > Shaders...` and select your shader pack.
