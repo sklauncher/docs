@@ -4,6 +4,9 @@ description: Questions about SKlauncher (the launcher itself)
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 :::tip
 
 Before you start looking here, check the following pages first:
@@ -13,22 +16,63 @@ Before you start looking here, check the following pages first:
 :::
 
 ## Where is SKlauncher installed?
-- Windows: `%APPDATA%\.minecraft`
-- Linux: `~/.minecraft`
-- macOS: `~/Library/Application Support/minecraft`
+Depending on the option used, SKlauncher is not installed but downloaded in the same folder as the game. So let's divide this same question into 2 parts:
 
-Copy that path according to your OS into the folder address bar to go to that location.
+:::note
 
-:::info
-
-This is actually where Minecraft: Java Edition is ~~installed~~ downloaded. SKlauncher specific files and folders are:\
-\- `\java` (you may find it, but it's useless for you)\
-\- `\sklauncher` (only for Windows in case you've used the Installer)\
-\- `\.minecraft\sklauncher`\
-\- `\.minecraft\sklauncher-fx.jar`\
-\- *The SKlauncher.exe/.jar you downloaded*
+1. In all cases, copy the path according to your OS into the folder address bar to go to that location.
+    - Don't forget that on Linux and macOS, files and folders starting with a dot (such as .minecraft) are invisible by default!
+2. These are default paths, where you did not [modify the path where it is installed](#can-i-install-sklauncher-in-another-folder).
 
 :::
+
+### Minecraft location
+<Tabs groupId="operating-systems">
+
+  <TabItem value="Windows" label="Windows" default>
+
+    - `%APPDATA%\.minecraft`
+
+  </TabItem>
+
+  <TabItem value="Linux" label="Linux">
+
+    - `~/.minecraft`
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    - `~/Library/Application Support/minecraft`
+
+  </TabItem>
+
+</Tabs>
+
+### SKlauncher location
+<Tabs groupId="operating-systems">
+
+  <TabItem value="Windows" label="Windows" default>
+
+    - Setup case: `%APPDATA%\sklauncher`
+    - Other cases: the Minecraft path is used.
+
+  </TabItem>
+
+  <TabItem value="Linux" label="Linux">
+
+    - The Minecraft path is used.
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    - .dmg and .app case: `~/Applications/sklauncher`
+    - Other cases: the Minecraft path is used.
+
+  </TabItem>
+
+</Tabs>
 
 ## Can I install SKlauncher in another folder?
 Yes, just run it with `--workDir` but keep in mind that:
@@ -36,13 +80,36 @@ Yes, just run it with `--workDir` but keep in mind that:
 2. Everything that should go in *[.minecraft](#where-is-sklauncher-installed)* will now be in the workDir you set.
 3. If you already had [game directories](#how-does-game-directory-work) defined, you'll have to change them to the new path.
 
-### Windows
-Create a shortcut and edit it to use this launch parameter or run it from the Terminal / CMD:
-- Shortcut: Right click on SKlauncher.exe/.jar -> Create shortcut -> Right click on that new shortcut -> Properties -> General tab -> Target: and at the end add `--workDir "C:\Games\SKlauncher"` (like [this](https://i.imgur.com/T1HkqQc.png)).
-- CMD: `SKlauncher.exe --workDir "C:\Games\SKlauncher"` or `java.exe -jar SKlauncher.jar --workDir "C:\Games\SKlauncher"`
+:::note
 
-### Linux / macOS
-Run it from the Terminal: `java -jar SKlauncher.jar --workDir "~/Games/SKlauncher"`
+This is actually where SKlauncher (not Setup) and the Game will download everything, if you are really talking about the Setup for Windows:\
+\- Modify the installation or reinstall and when it asks you where to install, select the location yourself.
+
+:::
+
+<Tabs groupId="operating-systems">
+
+  <TabItem value="Windows" label="Windows" default>
+
+    Create a shortcut (or edit the one you already have) and edit it to use this launch parameter or run it from the Terminal / CMD:
+    - Shortcut: Right click on SKlauncher.exe/.jar -> Create shortcut -> Right click on that new shortcut -> Properties -> General tab -> Target: and at the end add `--workDir "C:\Games\SKlauncher"` (like [this](/img/faq/launcher-related/workDir-Example.png)).
+    - CMD: `SKlauncher.exe --workDir "C:\Games\SKlauncher"` or `java.exe -jar SKlauncher.jar --workDir "C:\Games\SKlauncher"`
+
+  </TabItem>
+
+  <TabItem value="Linux" label="Linux">
+
+    - Terminal: `java -jar SKlauncher.jar --workDir "~/Games/SKlauncher"`
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    - Terminal: `java -jar SKlauncher.jar --workDir "~/Games/SKlauncher"`
+
+  </TabItem>
+
+</Tabs>
 
 ## Difference between Microsoft and Offline?
 Since that's already a bit explained by reading the [Log in](/getting-started/login) guide, let's talk about the key differences in a very simple and summarized way.
@@ -58,10 +125,12 @@ Since that's already a bit explained by reading the [Log in](/getting-started/lo
 <br/><br/>
 
 Microsoft has the absolute advantage since the only real limit is the [Cape](https://minecraft.wiki/w/Cape).\
-You also show your support for the creators, who have been updating the game for over 15 years and allowing you to play every version to this day.
+You also show your support for the creators, who have been updating the game for over {new Date().getFullYear() - 2009} years and allowing you to play every version to this day.
 
 ## Can I use SKlauncher if I own Minecraft: Bedrock Edition?
-You cannot play Minecraft: Bedrock Edition with SKlauncher since it is a Minecraft: Java Edition launcher. But if you own Minecraft: Bedrock Edition for PC, you should be able to get Minecraft: Java Edition for free, which you can use with the launcher. Unfortunately, if you only own Minecraft: Bedrock Edition on console (XBOX, Playstation, etc.) or on mobile (iOS, Android) you'll have to buy the game seperately for PC. Refer to the [question below](#where-can-i-buy-the-game) for info on where to buy the game.
+You cannot play Minecraft: Bedrock Edition with SKlauncher since it is a Minecraft: Java Edition launcher.\
+But if you own Minecraft: Bedrock Edition for PC, you should be able to get Minecraft: Java Edition for free, which you can use with the launcher.\
+Unfortunately, if you only own Minecraft: Bedrock Edition on console (Xbox, PlayStation, etc.) or on mobile (iOS, Android) you'll have to buy the game seperately for PC. Refer to the [question below](#where-can-i-buy-the-game) for info on where to buy the game.
 
 ## Where can I buy the game?
 - You can do it from the [Official Site](https://www.minecraft.net/store/minecraft-java-bedrock-edition-pc) and [Microsoft Store](https://www.microsoft.com/p/apps/9nxp44l49shj) as permanent options (one-time payment).
@@ -94,7 +163,7 @@ Visit [this](/virus) link for more information, since this is a very complex que
 If you want something short: No! SKlauncher never had, doesn't have and never will have viruses!
 
 ## Is SKlauncher open source?
-The actual launcher isn't open source at the moment, but there are plans for it to be in the future. However the code code isn't obfuscated, so you could decompile it and verify everything for yourself.\
+The actual launcher isn't open source at the moment, but there are plans for it to be in the future. However the source code isn't obfuscated, so you could decompile it and verify everything for yourself.\
 Meanwhile, the Windows Installer is open source and you can find its repository [here](https://github.com/sklauncher/installer).
 
 > We would like to go open-source in 2024, but it's not so simple. Many parts of the launcher is not ready for foss, but I would love to make it foss. When I started this project I never intended it to be open-source as you need some sacrifices for it,
@@ -163,15 +232,45 @@ This way you can try any Java you want without any problems, because maybe the J
 :::
 
 ## How to uninstall SKlauncher?
-If you got the launcher through the Setup on Windows, you can follow one of these 3 methods:
-1. Open Control Panel > Programs & Features > Uninstall or change a program > Choose SKlauncher from your programs list.
-2. Open Settings (Windows 10/11) > Apps > Installed Apps > Choose SKlauncher from the app list.
-3. Navigate to `%APPDATA%\sklauncher` and run the `unins000.exe` file located within that directory.
+Everything depends on the option used and how much you want to delete (for example, one thing is to delete everything that is SKlauncher and another everything that is Minecraft).
 
-If you got the launcher through .jar, .app or any of the other ways, follow [this](#where-is-sklauncher-installed) question and delete the mentioned files/folders that are from SKlauncher and you're done.\
-Or also the .minecraft folder, but that's deleting the whole game (including your worlds, mods and resource packs) and not just SKlauncher.
+<Tabs groupId="operating-systems">
 
-If your idea is to delete absolutely everything, also uninstall Java.\
+  <TabItem value="Windows" label="Windows" default>
+
+    - Setup case:
+        - Open Control Panel > Programs & Features > Uninstall or change a program > Choose SKlauncher from your programs list, or...
+        - Open Settings > Apps > Installed Apps > Choose SKlauncher from the app list, or...
+        - Navigate to [where SKlauncher is installed](#where-is-sklauncher-installed) and run the `unins000.exe` file located within that directory.
+    - Other cases:
+        - `%APPDATA%\java` (you may find it, but it's useless for you)
+        - Navigate to [where SKlauncher is installed](#where-is-sklauncher-installed) and delete the `sklauncher` folder and `sklauncher-fx.jar` file.
+        - Delete the `SKlauncher.exe/.jar` file you downloaded.
+
+  </TabItem>
+
+  <TabItem value="Linux" label="Linux">
+
+    - `~/java` (you may find it, but it's useless for you)
+    - Navigate to [where SKlauncher is installed](#where-is-sklauncher-installed) and delete the `sklauncher` folder and `sklauncher-fx.jar` file.
+    - Delete the `SKlauncher.jar` file you downloaded.
+
+  </TabItem>
+
+  <TabItem value="macOS" label="macOS">
+
+    - .dmg and .app case:
+        - Go to Applications, right click on SKlauncher and finally on Move to Bin.
+    - Other cases:
+        - `~/java` (you may find it, but it's useless for you)
+        - Navigate to [where SKlauncher is installed](#where-is-sklauncher-installed) and delete the `sklauncher` folder and `sklauncher-fx.jar` file.
+        - Delete the `SKlauncher.jar` file you downloaded.
+
+  </TabItem>
+
+</Tabs>
+
+If your idea is to delete absolutely everything, delete the `.minecraft` folder and also uninstall Java.\
 And after all that restart the PC, so you can say that you have "deleted all traces" of Java, SKlauncher and Minecraft: Java Edition.
 
 ## Where are the logs located?
