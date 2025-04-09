@@ -99,13 +99,16 @@ This is actually where SKlauncher (not Setup) and the Game will download everyth
 
   <TabItem value="Linux" label="Linux">
 
-    - Terminal: `java -jar SKlauncher.jar --workDir "~/Games/SKlauncher"`
+    - Terminal: `java -jar SKlauncher.jar --workDir "$HOME/Games/SKlauncher"`
 
   </TabItem>
 
   <TabItem value="macOS" label="macOS">
 
-    - Terminal: `java -jar SKlauncher.jar --workDir "~/Games/SKlauncher"`
+    - .dmg and .app case:
+        - Terminal: `java -jar ~/Applications/sklauncher/SKlauncher.jar --workDir "$HOME/Games/SKlauncher"`
+    - Other cases:
+        - Terminal: `java -jar SKlauncher.jar --workDir "$HOME/Games/SKlauncher"`
 
   </TabItem>
 
