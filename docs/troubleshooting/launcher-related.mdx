@@ -27,9 +27,9 @@ You have 2 possible options:\
 Maybe the website doesn't work for you, maybe you start the launcher but it says something like "Offline Mode - You're connected to the Internet" or it has some other error that seems related to the Internet connection.
 
 These problems are complicated because they can be:\
-\- You or your ISP's problem.\
+\- Yours or your ISP's problem.\
 \- SKlauncher's problem.\
-\- External problem that none of you, your ISP or SKlauncher can solve.
+\- External problem that neither you, your ISP or SKlauncher can solve.
 
 :::tip
 
@@ -44,7 +44,7 @@ These problems are complicated because they can be:\
     - You can even change the NTP server by using [Google NTP](https://developers.google.com/time/guides), [Cloudflare NTP](https://developers.cloudflare.com/time-services/ntp/usage/) or [Pool NTP Project](https://www.ntppool.org/en/) and have your OS take care of keeping the time in sync (something that should be on default).
 3. Restart the Router and even the PC.
 4. Use [Google DNS](https://developers.google.com/speed/public-dns/docs/using) or [Cloudflare DNS](https://one.one.one.one/dns/), both links show you (scroll down) the IPv4 and IPv6 to use and even instructions on how to use them.
-    - After changing the DNS, it would be convenient to do an `ipconfig /flushdns` or its equivalent in your OS (this command is for Windows via CMD / PowerShell).
+    - After changing the DNS servers, it would be beneficial to do `ipconfig /flushdns` or its equivalent in your OS (this command is for Windows via CMD / PowerShell with admin rights).
 5. Try using a VPN like [Cloudflare WARP](https://one.one.one.one/) or [Proton VPN](https://protonvpn.com/), where you should choose (if it allows it) the nearest country to yours (you will have to test it, since you may choose one that blocks or is blocked by the services you want to use).
 
 If after following each step and even step 6 is not a solution, it could be a problem where you can't do anything but wait.\
@@ -58,7 +58,7 @@ You can also check the [Web related FAQ](/faq/web-related#need-more-help) sectio
 5. Follow the [Installation](/getting-started/install) guide again and restart the PC.
 
 ## My skin hasn't changed
-- If there are no problems with the server (like the overload that occurred in August 2021) or problems with your connection:
+- If there are no problems with the SKlauncher's skin server (like the overload that occurred in August 2021) or problems with your connection:
   - When you upload your skin/cape for the first time you should see the change instantly (if you already have the Launcher/Game open, you should close it).
   - But when you want to change your skin/cape for the second, third, etc. time it may take a couple of hours to change (and it's even possible that the Launcher shows your old skin but inside the Game you already see the new one).
 - So if you saved the skin/cape [properly](/faq/web-related#how-do-i-put-on-a-skin-or-cape), you don't have much else to do but wait.
@@ -73,11 +73,11 @@ Check if your [Launcher logs](/faq/launcher-related#where-are-the-logs-located) 
 1. Start a full system scan with your Antivirus, the stronger the scan the better. And waits for it to finish.
     - Hey! Maybe you don't have any virus and you know perfectly well that you ran something that was going to change what is mentioned in step 2.
 2. Disconnect from Internet and open `%WINDIR%\System32\drivers\etc\hosts` file with Notepad. Delete unwanted DNS text lines without # at the beginning of the text lines (especially if they say something about Microsoft, Mojang, etc).
-3. Run CMD as administrator and type `ipconfig /flushdns`. After that just restart your PC, reconnect to Internet and run SKlauncher.
+3. Run CMD as administrator and type `ipconfig /flushdns`. It will clear your [DNS cache](https://www.lifewire.com/what-is-a-dns-cache-817514). After that restart your PC, reconnect to Internet and run SKlauncher.
     - If it still doesn't work delete .json files of the launcher and run again. If you've still questions and problems, head to our [Discord](https://skmedix.pl/discord).
 
 ## I can't allocate more than 1 GB
-You must have x64 (64-bits) Java installed, read the [Install](/getting-started/install) guide.
+You must have x64 (64-bit) Java installed, read the [Install](/getting-started/install) guide.
 
 ## I can only play the Demo mode
 If you haven't [forced the demo mode](/faq/launcher-related#can-i-force-the-demo-mode), then read the [Log in](/getting-started/login) guide again.
