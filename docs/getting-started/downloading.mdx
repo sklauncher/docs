@@ -4,6 +4,9 @@ title: Downloading
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 To download and run SKlauncher, you will need to follow these simple steps:
 
 ## Downloading
@@ -17,22 +20,24 @@ To download and run SKlauncher, you will need to follow these simple steps:
 ## Common questions
 Some users may have some questions before or after downloading, we'll see the main ones here:
 
-### Can I use the .jar in Windows?
-Of course!
-
 ### What's the difference between all the download options?
-On Windows, you have 3 options: the Setup, .jar and .exe\
-The Windows Setup is a new addition and is the recommended way to install the launcher. With the setup, no other installations are necessary. The setup downloads all the required files including the JRE and JavaFX for you. It is also [open source](https://github.com/sklauncher/installer).\
-The .jar requires a JRE (Eclipse Adoptium 21 recommended) to run. It's also **portable**, meaning it can be run from any directory.\
-The portable .exe is the .jar converted to .exe using Exe4j, so the only difference is that the .exe will give you an error message if you don't have Java installed/updated (and a nice icon).\
-It can be said that it's to simplify things for Windows users.
 
-On macOS, you also have 3 options: the .dmg, .app and .jar\
-The .dmg and the .app are mostly the same thing and both require Java to work. The .dmg requires you to drag it into the Applications folder to work.\
-The .jar also needs Java to run.
-
-On Linux you only have the option for a .jar download, which requires Java to run.\
-Flatpak will be released in the future.
+<Tabs>
+  <TabItem value="Windows" label="Windows" default>
+    - **Setup**: the recommended way to install the launcher. It includes everything needed, so no additional installations are required.
+    - **.jar**: requires Java to run. It's **portable**, meaning it can be run from any directory.
+    - **.exe** *(included in the .zip file only)*: the .jar converted to .exe using Exe4j. The only difference is that the .exe provides an error message if Java is missing or outdated (and has a nicer icon).\
+                It can be said that it's to simplify things for Windows users when there was no Setup (so in the future it will no longer be available for download).
+  </TabItem>
+  <TabItem value="Linux" label="Linux">
+    - **.jar**: requires Java to run. It's **portable**, meaning it can be run from any directory.
+    - **Flatpak**: will be released in the future.
+  </TabItem>
+  <TabItem value="macOS" label="macOS">
+    - **.dmg** and **.app**: both require Java to work. The .app inside the .dmg must be dragged into the Applications folder.
+    - **.jar**: also requires Java to run. It's **portable**, meaning it can be run from any directory.
+  </TabItem>
+</Tabs>
 
 ### Is it a virus?
 Visit [this](/virus) link for more information, since this is a very complex question to be simplified and answered in simple terms.\

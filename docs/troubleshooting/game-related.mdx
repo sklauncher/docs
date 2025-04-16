@@ -4,6 +4,9 @@ description: Problems with Minecraft - Java Edition (the game)
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Game doesn't start due to GLFW, OpenGL, ig7icd64.dll or atio6axx.dll error
 Possible solutions which you'll have to search on the Internet if you don't understand something:
 - Check for driver updates on the graphics brand's website: Search and update manually, because sometimes the automatic software says "you already have the latest version" and it's not true.
@@ -40,22 +43,45 @@ The Minecraft engine (LWJGL) has dropped Linux x86 support in LWJGL 3, so play o
 ## Invalid signature for profile public key
 Since the error is possible for both Microsoft and Offline accounts...
 
-### Microsoft accounts
-- Check that there are no problems in the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status).
-- Follow the error message and restart the game and launcher (it may even be useful to log out and log back in).
+<Tabs groupId="account-type">
 
-### Offline accounts
-- The server you're trying to connect to only allows players with a public key signed by Mojang (`enforce-secure-profile=true`).
-    - If it's your server, then set `enforce-secure-profile=false` in your `server.properties` file and restart the server.
+  <TabItem value="Microsoft" label="Microsoft accounts" default>
+
+    - Check that there are no problems with the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status).
+    - Follow the error message and restart the game and launcher (you may want to try logging out and in again).
+
+  </TabItem>
+
+  <TabItem value="Offline" label="Offline accounts">
+
+    - The server you're trying to connect to only allows players with a public key signed by Mojang (`enforce-secure-profile=true`).
+        - If it's your server, then set `enforce-secure-profile=false` in your `server.properties` file and restart the server.
+
+  </TabItem>
+
+</Tabs>
 
 ## Failed to login: Invalid session
 Since the error is possible for both Microsoft and Offline accounts...
 
-### Microsoft accounts
-- Check that there are no problems in the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status).
-- Follow the error message and restart the game and launcher (it may even be useful to log out and log back in).
+<Tabs groupId="account-type">
 
-### Offline accounts
-- The server you're trying to connect to is for Online (Microsoft) accounts (`online-mode=true`).
-    - If it's your server, then set `online-mode=false` in your `server.properties` file and restart the server.
-- It could also be that a Microsoft account already joined that server and your Offline account has the same name. In that case you'll have to change your name to one that doesn't exist (you can check it in [NameMC](https://namemc.com/) / [MCChecker](https://mcchecker.net/)).
+  <TabItem value="Microsoft" label="Microsoft accounts" default>
+
+    - Check that there are no problems with the [Xbox Live service](https://support.xbox.com/en-US/xbox-live-status).
+    - Follow the error message and restart the game and launcher (you may want to try logging out and in again).
+
+  </TabItem>
+
+  <TabItem value="Offline" label="Offline accounts">
+
+    - The server you're trying to connect to is for Online (Microsoft) accounts (`online-mode=true`).
+        - If it's your server, then set `online-mode=false` in your `server.properties` file and restart the server.
+    - It could also be that a Microsoft account already joined that server and your Offline account has the same name. In that case you'll have to change your name to one that doesn't exist (you can check it in [NameMC](https://namemc.com/) / [MCChecker](https://mcchecker.net/)).
+
+  </TabItem>
+
+</Tabs>
+
+## Need more help?
+If your problem isn't covered here, check the [Web related FAQ](/faq/web-related#need-more-help) section for information on how to get additional help through Discord or online resources.
