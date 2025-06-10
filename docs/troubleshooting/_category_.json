@@ -1,6 +1,7 @@
 {
   "position": 5,
   "label": "Troubleshooting",
+  "description": "Troubleshooting about the website, the launcher and the game",
   "collapsible": true,
   "link": {
     "type": "generated-index"
