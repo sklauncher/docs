@@ -4,34 +4,35 @@ description: Create your own dedicated server to play with more than 1M players
 sidebar_position: 2
 ---
 
-:::info TODO
+:::info
 
-This document is a work in progress. Please help us improve it by contributing!
+Since *Release 1.2.5* / *Snapshot 1.3* \* you can create a *dedicated server* for *Minecraft: Java Edition*.
 
-:::warning NOTICE TO CONTRIBUTORS
-
-1. No need to install Java!\
-Since we're going to talk about commands or even create a .bat/.sh file to start the server, it would be convenient to use the extractable Java\
-(otherwise, imagine the problem of installing a Java for SKlauncher and another Java for the server).
-
-2. There isn't an official list to download the .jar for the server, but there's [MCVersions](https://mcversions.net/) as a possible option (since the URLs come from the official server).
+<small>\* - Actually from previous versions as well, but there is a problem: there is no direct download link from Mojang anymore.
+So you can search for previous versions from [Betacraft](https://files.betacraft.uk/server-archive/), but we can't ensure the file integrity.</small>
 
 :::
 
-> Want to set up a multiplayer server?
->
-> Please note: This server setup is only compatible with Minecraft: Java Edition.
->
-> If you want to run a Minecraft multiplayer server by yourself things get kind of involved (see [this wiki article for a tutorial](https://minecraft.wiki/w/Tutorials/Setting_up_a_server)). First make sure you can use java from the command line. On Linux and macOS this should already be set up but on Windows you might have to tinker with the PATH environment variable.
->
-> Download [minecraft_server.jar](https://www.minecraft.net/en-us/download/server) and run it with the following command:
->
-> `java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui`
->
-> Should you want to start the server with its graphical user interface you can leave out the "nogui" part.
->
-> Just so you know, by downloading any of the software on this page, you agree to the [Minecraft End User License Agreement](https://account.mojang.com/documents/minecraft_eula) and [Privacy Policy](https://go.microsoft.com/fwlink/?LinkId=521839).
->
-> If you want to skip the setup and start exploring other 3rd party servers visit our official [Server Listing Site](http://aka.ms/verifiedservers). Each server offers its own brand of fun and uniqueness. Find your favorite with our Server List Site, where all listed servers have been reviewed and verified as following our community standards and guidelines. Browse servers based on game type, play style, and more. Chance is there’s a server listed for you – regardless of age or the way you play.
+1. Download the **Server Jar** of the version you want from [Xyrios](https://xyrios.com/minecraft/tools/mc-versions)[^1].
+    - Check the required Java version, since you can't use (for example) Java 8 if the server requires Java 21.
+2. Download the required Java version from [Adoptium](https://adoptium.net/temurin/releases/), make sure to filter by OS (like Windows), Architecture (like x64) and finally Version (like 21). Then download the one that is JRE (otherwise JDK) and its extension is `.zip` / `.tar.gz` [^2]
+3. Create a folder for your server and put inside the `server.jar`, also extract the Java `.zip` / `.tar.gz` file into that folder.
+    - And rename the Java folder to something simple, in this guide we rename it to `java_folder`
+4. Open a command prompt or terminal here (or navigate to your server folder using the `cd` command) and execute the following Java command to start your Minecraft multiplayer server:\
+`java_folder/bin/java -Xmx1024M -Xms1024M -jar server.jar nogui` [^3]
+5. The first run will generate an `eula.txt` file. Open this file with any text editor and change `eula=false` to `eula=true` to accept [Minecraft's End User License Agreement](https://aka.ms/MinecraftEULA).
+6. *(Optional)* Configure the [server.properties](https://minecraft.wiki/w/Server.properties#Java_Edition) file the way you want, especially the [enforce-secure-profile](/troubleshooting/game-related#invalid-signature-for-profile-public-key) and [online-mode](/troubleshooting/game-related#failed-to-login-invalid-session) keys.
+    - Restart the server (basically by executing the `stop` command and starting it again with step 4) after making changes to this file.
+7. Set up port forwarding to allow other players to connect to your server over the internet:
+    1. Access your router's configuration page (usually at 192.168.0.1 or 192.168.1.1)
+    2. Find port forwarding settings (may be under "Advanced," "Security," or "Gaming")
+    3. Forward port 25565 (TCP) [^4] to your computer's local IP address
+    4. Players can connect using your public IP address (find it by searching "What is my IP" online) [^5]
 
-Source: https://www.minecraft.net/en-us/download/server
+***
+
+[^1]: If you check the URL of the *Server Jar* you are about to download, you will see that it comes from Mojang's official server.
+[^2]: Basically, the extractable version of Java compatible with your PC so you don't install anything.
+[^3]: On Linux / macOS you may need to give it execute permissions first by typing `chmod +x server.jar` (and maybe `755` instead of `+x`).
+[^4]: Basically the value of `server-port` in your `server.properties`
+[^5]: Security Note: Only share your IP address with trusted friends. For public servers, consider using a dedicated hosting service instead of self-hosting.
