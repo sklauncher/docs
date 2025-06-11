@@ -1,6 +1,7 @@
 {
   "position": 7,
   "label": "Contributions",
+  "description": "Learn how to contribute to SKlauncher",
   "collapsible": false,
   "link": {
     "type": "generated-index"

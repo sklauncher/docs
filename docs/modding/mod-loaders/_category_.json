@@ -1,6 +1,7 @@
 {
   "position": 0,
   "label": "Mod Loaders",
+  "description": "Learn how to install a mod loader",
   "collapsible": true,
   "link": {
     "type": "generated-index"

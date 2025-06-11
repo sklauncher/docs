@@ -1,6 +1,7 @@
 {
   "position": 4,
   "label": "Frequently Asked Questions",
+  "description": "Frequently asked questions about the website, the launcher and the game",
   "collapsible": true,
   "link": {
     "type": "generated-index"

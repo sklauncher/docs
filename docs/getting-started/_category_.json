@@ -1,6 +1,7 @@
 {
   "position": 1,
   "label": "Getting started",
+  "description": "Start using SKlauncher today!",
   "collapsible": false,
   "link": {
     "type": "generated-index"

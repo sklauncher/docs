@@ -1,6 +1,7 @@
 {
   "position": 3,
   "label": "Features",
+  "description": "Features of SKlauncher",
   "collapsible": false,
   "link": {
     "type": "generated-index"
