@@ -20,7 +20,6 @@ const config = {
   projectName: 'docs', // Usually your repo name.
 
   future: {
-    experimental_faster: true,
     v4: true,
   },
 
