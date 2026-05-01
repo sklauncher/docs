@@ -1,0 +1,43 @@
+---
+title: Installing NeoForge
+description: Install NeoForge in SKlauncher, plus tips for downloading mods and troubleshooting issues.
+---
+
+# Installing NeoForge
+
+:::danger
+Always download mods from trusted sources. Anything else can damage your system.
+:::
+
+## Through SKlauncher
+
+1. Open **SKlauncher**.
+2. Go to the **Installations Manager** tab in the left menu.
+3. Click **New Installation**.
+4. In the **Create new installation** window:
+    - Give the installation a name (e.g. `NeoForge 1.21.1`).
+    - Select **NeoForge** from the version-type list.
+    - Choose your Minecraft and NeoForge Loader versions.
+5. *(Optional)* Customise other settings:
+    - Pick or upload an icon.
+    - Change the game directory.
+    - Under **More Options**, adjust memory, Java arguments, or launcher visibility.
+6. Click **Save**.
+
+## Manual install
+
+Alternatively, download the [official NeoForge installer](https://neoforged.net/) and run it. The new installation appears in SKlauncher (restart the launcher if it doesn't show up immediately).
+
+## Launching NeoForge
+
+1. Return to the main SKlauncher window.
+2. Select your NeoForge installation in the sidebar.
+3. Click **Play**.
+
+You're ready. Drop mod `.jar` files into the `mods` folder inside `.minecraft` (create it if missing).
+
+## Troubleshooting
+
+- Make sure NeoForge and your mods are all compatible with the same Minecraft version.
+- Some mods need additional dependencies. Check each mod's documentation.
+- If a mod misbehaves, check the game log for errors that point at the cause.

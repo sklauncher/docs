@@ -1,9 +1,0 @@
-{
-  "position": 1,
-  "label": "Mods",
-  "description": "Learn how to install mods",
-  "collapsible": true,
-  "link": {
-    "type": "generated-index"
-  }
-}

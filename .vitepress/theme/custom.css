@@ -1,0 +1,46 @@
+:root {
+  --vp-c-brand-1: #277dff;
+  --vp-c-brand-2: #4891ff;
+  --vp-c-brand-3: #69a5ff;
+  --vp-c-brand-soft: rgba(72, 145, 255, 0.16);
+}
+
+.dark {
+  --vp-c-brand-1: #69a5ff;
+  --vp-c-brand-2: #4891ff;
+  --vp-c-brand-3: #277dff;
+  --vp-c-brand-soft: rgba(72, 145, 255, 0.16);
+}
+
+.VPNavBarTitle .VPImage.logo,
+.VPHero .VPImage.image-src {
+  filter: invert(100%);
+}
+
+.dark .VPNavBarTitle .VPImage.logo,
+.dark .VPHero .VPImage.image-src {
+  filter: invert(0%);
+}
+
+ul.emoji-list {
+  list-style-type: none;
+  padding-left: 12px;
+}
+
+ul.emoji-list li {
+  display: flex;
+  align-items: flex-start;
+  line-height: 32px;
+}
+
+ul.emoji-list span {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 28px;
+  text-align: center;
+  width: 1.25em;
+}
+
+ul.emoji-list li p {
+  margin: 0;
+}

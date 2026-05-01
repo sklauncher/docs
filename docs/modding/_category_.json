@@ -1,9 +1,0 @@
-{
-  "position": 6,
-  "label": "Modding",
-  "collapsible": false,
-  "link": {
-    "type": "doc",
-    "id": "modding"
-  }
-}
