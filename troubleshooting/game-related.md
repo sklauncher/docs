@@ -70,7 +70,7 @@ This error can hit both Microsoft and Offline accounts.
 
 - The server is in online mode (`online-mode=true`), which only accepts Microsoft accounts.
     - If it's your server, set `online-mode=false` in `server.properties` and restart the server.
-- Or a Microsoft account with the same name has already joined that server. Pick a different username (check availability on [Xyrios](https://xyrios.com/minecraft/)).
+- Or a Microsoft account with the same name has already joined that server. Pick a different username (check availability on the [Xyrios name checker](https://xyrios.com/minecraft/tools/name-checker)).
 
 ::::
 

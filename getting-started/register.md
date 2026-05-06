@@ -31,4 +31,4 @@ The account exists, but you still need a **profile**. That's what defines your i
 
 Head to the [Customisation page](https://skmedix.pl/settings/customization), follow the prompts, then [Log in](/getting-started/login) to the launcher.
 
-> **Picking a username**: if it already exists on SKlauncher, you can't reuse it. Some users also check [Xyrios](https://xyrios.com/minecraft/) to avoid clashing with a Microsoft account.
+> **Picking a username**: if it already exists on SKlauncher, you can't reuse it. Some users also run it through the [Xyrios name checker](https://xyrios.com/minecraft/tools/name-checker) to avoid clashing with a Microsoft account.
