@@ -5,24 +5,22 @@ description: Choose the right login option for your situation
 
 # Log in
 
-Before signing in, answer this. It'll save you headaches.
+SKlauncher has two ways to sign in. Pick the one that matches your situation.
 
-:::danger ❓ Do you own Minecraft: Java Edition?
+## Microsoft login
 
-:::: tabs
+Use this if you **own [Minecraft: Java Edition](/faq/launcher-related#where-can-i-buy-the-game)** and have signed in to it at least once via the official launcher.
 
-== 💰 Yes, I own it
+[Microsoft login guide](/getting-started/login/microsoft)
 
-Use the **[Microsoft login](/getting-started/login/microsoft)** option.
+## Offline login
 
-== 🆓 No, I don't own it
+Use this if you **don't own the game**, or want to play with any username.
 
-Use the **[Offline login](/getting-started/login/offline)** option.
+You can still join multiplayer, but only on servers with [`online-mode=false`](/troubleshooting/game-related#failed-to-login-invalid-session).
 
-> 💡 Don't let the name confuse you. You can still play multiplayer, but only on servers with [`online-mode=false`](/troubleshooting/game-related#failed-to-login-invalid-session).
+[Offline login guide](/getting-started/login/offline)
 
-😉 Buying the game has many advantages and supports the creators. Keep saving and [grab it when you can](/faq/launcher-related#where-can-i-buy-the-game)!
-
-::::
-
+:::tip
+Buying the game has many advantages and supports the creators. Keep saving and [grab it when you can](/faq/launcher-related#where-can-i-buy-the-game)!
 :::
