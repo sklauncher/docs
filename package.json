@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "@iconify/vue": "^5.0.1",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.12.4",
+    "oxc-minify": "^0.130.0",
     "vitepress": "2.0.0-alpha.17",
     "vitepress-plugin-tabs": "^0.9.0",
     "vitepress-versioning-plugin": "^1.3.0",
@@ -22,6 +23,9 @@
     "node": ">=24.15.0"
   },
   "pnpm": {
+    "overrides": {
+      "vite": ">=8.0.0"
+    },
     "onlyBuiltDependencies": [
       "esbuild",
       "skl-docs"
