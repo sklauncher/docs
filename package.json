@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@iconify/vue": "^5.0.1",
-    "@types/node": "^24.12.4",
+    "@types/node": "^25.9.1",
     "oxc-minify": "^0.133.0",
     "vitepress": "2.0.0-alpha.17",
     "vitepress-plugin-tabs": "^0.9.0",
