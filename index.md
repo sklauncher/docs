@@ -3,6 +3,10 @@ title: Introduction
 description: Official documentation of SKlauncher, a game launcher for Minecraft - Java Edition
 ---
 
+:::danger Avoid fake download sites
+There are fake websites that distribute malware disguised as SKlauncher. The **only** official site is [skmedix.pl](https://skmedix.pl). Never download SKlauncher from anywhere else.
+:::
+
 # Introduction
 
 SKlauncher is a game launcher for **Minecraft: Java Edition**, designed to offer players an easy-to-use, visually appealing interface for managing the game and installed modifications, along with a range of offline features.

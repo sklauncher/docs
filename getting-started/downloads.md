@@ -5,9 +5,13 @@ description: Step-by-step guide to downloading SKlauncher for Windows, Linux or 
 
 # Downloading
 
+:::danger Avoid fake download sites
+There are fake websites that distribute malware disguised as SKlauncher. The **only** official site is [skmedix.pl](https://skmedix.pl). Never download SKlauncher from anywhere else.
+:::
+
 Grabbing SKlauncher takes three steps:
 
-1. Open the [SKlauncher downloads page](https://skmedix.pl/downloads).
+1. Open the [SKlauncher downloads page](https://skmedix.pl/downloads) (skmedix.pl).
 2. Pick the build for your OS:
     - **Windows**: download the **Setup** (`.exe`) installer. &nbsp;<Badge type="tip" text="Recommended" />
     - **Linux**: download the **`.jar`**.
