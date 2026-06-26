@@ -2,3 +2,7 @@ minimumReleaseAge: 1440
 onlyBuiltDependencies:
   - esbuild
   - skl-docs
+overrides:
+  esbuild: '>=0.28.1'
+  vite: '>=8.0.16'
+
