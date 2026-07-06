@@ -1,3 +1,10 @@
 [
-  { "text": "Introduction", "link": "/" }
+  {
+    "text": "Getting started",
+    "items": [
+      { "text": "Introduction", "link": "/" },
+      { "text": "Downloading", "link": "/getting-started/downloads" },
+      { "text": "Installation", "link": "/getting-started/install" }
+    ]
+  }
 ]

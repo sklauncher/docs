@@ -9,6 +9,10 @@ There are fake websites that distribute malware disguised as SKlauncher. The **o
 
 # Introduction
 
+:::tip SKlauncher 4.0 is in open beta
+You can try SKlauncher 4.0 today at [next.skmedix.pl](https://next.skmedix.pl). See the [4.0 documentation](/4.0/) for what's new and how to install it.
+:::
+
 SKlauncher is a game launcher for **Minecraft: Java Edition**, designed to offer players an easy-to-use, visually appealing interface for managing the game and installed modifications, along with a range of offline features.
 
 For {{ new Date().getFullYear() - 2013 }} years, SKlauncher has enabled users to log in with their Mojang accounts (prior to the migration to Microsoft in 2023) or use Offline accounts, with the option to create an SKlauncher account.
@@ -18,7 +22,7 @@ For {{ new Date().getFullYear() - 2013 }} years, SKlauncher has enabled users to
 - ☕ &nbsp;Built with Java 8, with support for Java 21
 - 🔒 &nbsp;Supports authentication with Microsoft accounts
 - 🚀 &nbsp;Frequently updated to provide new features
-- 📦 &nbsp;Supports installing and managing modifications &nbsp;<Badge type="warning" text="Coming in 4.0" />
+- 📦 &nbsp;Supports installing and managing modifications &nbsp;<Badge type="tip" text="Available in the 4.0 beta" />
 - 💄 &nbsp;Simple and easy-to-use design
 
 ## The team
