@@ -4,7 +4,8 @@
     "items": [
       { "text": "Introduction", "link": "/" },
       { "text": "Downloading", "link": "/getting-started/downloads" },
-      { "text": "Installation", "link": "/getting-started/install" }
+      { "text": "Installation", "link": "/getting-started/install" },
+      { "text": "Migrating from 3.2", "link": "/getting-started/migrating" }
     ]
   }
 ]

@@ -48,3 +48,5 @@ Although the team is small, **the community** plays an invaluable role: users co
 ## Ready to start?
 
 Head to [Downloading](/4.0/getting-started/downloads) for the beta builds, or go straight to the [Installation guide](/4.0/getting-started/install).
+
+Coming from 3.2? See [Migrating from 3.2](/4.0/getting-started/migrating) to bring your profiles over.
