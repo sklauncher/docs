@@ -10,16 +10,16 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@iconify/vue": "^5.0.1",
-    "@types/node": "^24.13.3",
-    "oxc-minify": "^0.148.0",
-    "vitepress": "^2.0.0-alpha.19",
+    "@iconify/vue": "^5.0.3",
+    "@types/node": "^24.19.0",
+    "oxc-minify": "^0.151.0",
+    "vitepress": "^2.0.0-alpha.20",
     "vitepress-plugin-tabs": "^0.9.1",
     "vitepress-versioning-plugin": "^1.3.0",
-    "vue": "^3.5.42"
+    "vue": "^3.5.43"
   },
-  "packageManager": "pnpm@12.2.1",
+  "packageManager": "pnpm@12.6.0",
   "engines": {
-    "node": ">=24.20.0"
+    "node": ">=24.21.0"
   }
 }
