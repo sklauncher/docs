@@ -10,7 +10,7 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@iconify/vue": "^5.0.1",
+    "@iconify/vue": "^5.0.3",
     "@types/node": "^24.13.3",
     "oxc-minify": "^0.148.0",
     "vitepress": "^2.0.0-alpha.19",
