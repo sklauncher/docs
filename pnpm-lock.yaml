@@ -124,11 +124,11 @@ importers:
         specifier: ^0.148.0
         version: 0.148.0
       vitepress:
-        specifier: ^2.0.0-alpha.19
-        version: 2.0.0-alpha.19(@types/node@24.13.3)(postcss@8.5.26)
+        specifier: ^2.0.0-alpha.20
+        version: 2.0.0-alpha.20(@types/node@24.13.3)(postcss@8.5.26)
       vitepress-plugin-tabs:
         specifier: ^0.9.1
-        version: 0.9.1(vitepress@2.0.0-alpha.19(@types/node@24.13.3)(postcss@8.5.26))(vue@3.5.42)
+        version: 0.9.1(vitepress@2.0.0-alpha.20(@types/node@24.13.3)(postcss@8.5.26))(vue@3.5.42)
       vitepress-versioning-plugin:
         specifier: ^1.3.0
         version: 1.3.0(@algolia/client-search@5.57.0)(@types/node@24.13.3)(postcss@8.5.26)(search-insights@2.17.3)
@@ -1192,8 +1192,8 @@ packages:
       postcss:
         optional: true
 
-  vitepress@2.0.0-alpha.19:
-    resolution: {integrity: sha512-WnBsb0Bwr43kXKyiis+lld/7ri3hnMbthS8N3hpFtjjwsdLO4IRmiAE08D7aud4q6oMDf9uwRowxzNqRFe/amw==}
+  vitepress@2.0.0-alpha.20:
+    resolution: {integrity: sha512-uQWKmP9PaBkf9zxHn0iOml/ZPPDaGKqQXVMBHz3yjwyyd9Eg+BKLGxbqmOGlfOMCt6Fj8TLiAnE59qlKZ0A3xw==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4
@@ -2210,9 +2210,9 @@ snapshots:
       '@types/node': 24.13.3
       fsevents: 2.3.3
 
-  vitepress-plugin-tabs@0.9.1(vitepress@2.0.0-alpha.19(@types/node@24.13.3)(postcss@8.5.26))(vue@3.5.42):
+  vitepress-plugin-tabs@0.9.1(vitepress@2.0.0-alpha.20(@types/node@24.13.3)(postcss@8.5.26))(vue@3.5.42):
     dependencies:
-      vitepress: 2.0.0-alpha.19(@types/node@24.13.3)(postcss@8.5.26)
+      vitepress: 2.0.0-alpha.20(@types/node@24.13.3)(postcss@8.5.26)
       vue: 3.5.42
 
   vitepress-versioning-plugin@1.3.0(@algolia/client-search@5.57.0)(@types/node@24.13.3)(postcss@8.5.26)(search-insights@2.17.3):
@@ -2313,15 +2313,13 @@ snapshots:
       - universal-cookie
       - yaml
 
-  vitepress@2.0.0-alpha.19(@types/node@24.13.3)(postcss@8.5.26):
+  vitepress@2.0.0-alpha.20(@types/node@24.13.3)(postcss@8.5.26):
     dependencies:
       '@docsearch/css': 4.7.0
       '@docsearch/js': 4.7.0
       '@docsearch/sidepanel-js': 4.7.0
       '@iconify-json/simple-icons': 1.2.94
-      '@shikijs/core': 4.4.3
       '@shikijs/transformers': 4.4.3
-      '@shikijs/types': 4.4.3
       '@types/markdown-it': 14.2.0
       '@vitejs/plugin-vue': 6.0.8(vite@8.2.2(@types/node@24.13.3))(vue@3.5.42)
       '@vue/devtools-api': 8.2.1
