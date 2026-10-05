@@ -30,11 +30,11 @@ On a Microsoft account you'll need to upload via the [Minecraft Launcher](https:
 
 Minecraft: Java Edition doesn't support transparent skins by default. They won't be visible without specific mods.
 
-SKlauncher doesn't ship a mod for this since we don't modify the game. If you want to try it, [pick a suitable mod](/faq/launcher-related#can-i-use-clients-mods-resource-packs-shaders-etc-in-sklauncher).
+SKlauncher doesn't ship a mod for this. Its in-game changes only cover loading skins and a few fixes. If you want to try it, [pick a suitable mod](/faq/launcher-related#can-i-use-clients-mods-resource-packs-shaders-etc-in-sklauncher).
 
 ## Can I upload an animated cape?
 
-Same answer as transparent skins. SKlauncher doesn't modify the game, and that's required for animated capes to show in-world.
+Same answer as transparent skins. Animated capes need a mod to show in-world, and SKlauncher doesn't ship one.
 
 No plans to change this. If you want to see an animated cape in-game, [pick a suitable mod](/faq/launcher-related#can-i-use-clients-mods-resource-packs-shaders-etc-in-sklauncher).
 

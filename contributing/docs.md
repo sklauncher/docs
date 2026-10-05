@@ -48,19 +48,23 @@ The first lines of the file should be the frontmatter:
 ```
 ---
 title: <your title>
+description: <one sentence about the page>
 ---
 ```
 
-If you contributed meaningfully, add yourself to the `authors` list. Your GitHub avatar will show up at the top of the page:
+If you contributed meaningfully, add yourself to the `authors` list. Your GitHub avatar will show up under **Contributors**, next to the page outline (or at the top of the page on small screens):
 
 ```
 ---
 title: <your title>
+description: <one sentence about the page>
 authors:
   - your-github-handle
   - another-contributor
 ---
 ```
+
+A new page doesn't show up in the menu by itself. Add it to `sidebar` in `.vitepress/config.ts`. Pages for SKlauncher 4.0 go in `versions/4.0/`, and their menu is in `.vitepress/sidebars/versioned/4.0.json`.
 
 Then commit and open a [pull request](#how-to-open-a-pull-request).
 

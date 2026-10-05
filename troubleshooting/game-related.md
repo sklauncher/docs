@@ -25,9 +25,9 @@ A mod might fix this in some cases. Just be wary of mods that ask you to drop ra
 
 ## "Crash Report: Report was empty"
 
-Since the report itself is empty, please share your [logs in debug mode](/faq/launcher-related#where-are-the-logs-located). That gives the developer something to work with.
+Since the report itself is empty, please share your [logs in debug mode](/faq/launcher-related#debug-mode). That gives the developer something to work with.
 
-The likely cause: forced dGPU usage from launcher settings. Try [disabling Use Dedicated GPU](/faq/game-related#how-to-change-the-gpu-used-in-the-game) (Option A, but **disable**, not enable). Others report it's GPU-driver related, in which case work through the [three points above](#game-doesnt-start-due-to-glfw-opengl-ig7icd64-dll-or-atio6axx-dll).
+The likely cause: forced dGPU usage from launcher settings. Try [disabling Use Dedicated GPU](/faq/game-related#how-to-change-the-gpu-used-in-the-game) (Option A, but **disable**, not enable). Others report it's GPU-driver related, in which case work through the [three points above](#game-doesn-t-start-due-to-glfw-opengl-ig7icd64-dll-or-atio6axx-dll).
 
 :::info
 If disabling Use Dedicated GPU fixed it, please re-enable it and submit [debug-mode logs](/faq/launcher-related#where-are-the-logs-located) so the bug can be tracked down properly.

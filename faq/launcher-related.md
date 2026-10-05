@@ -46,7 +46,7 @@ Depending on which build you grabbed, SKlauncher isn't really *installed*. It's 
 
 == Windows
 
-- **Setup case**: `%APPDATA%\sklauncher`
+- **Setup case**: `%APPDATA%\sklauncher`, which only holds `SKlauncher.jar` and its Java. The launcher files and the game still go to the Minecraft path.
 - **Other cases**: same as the Minecraft path.
 
 == Linux
@@ -55,7 +55,7 @@ Depending on which build you grabbed, SKlauncher isn't really *installed*. It's 
 
 == macOS
 
-- **`.dmg` / `.app` case**: `~/Applications/sklauncher`
+- **`.dmg` / `.app` case**: the app is `SKlauncher.app` in your Applications folder. The launcher files and the game go to the Minecraft path.
 - **Other cases**: same as the Minecraft path.
 
 ::::
@@ -69,7 +69,7 @@ Yes, run it with `--workDir`. A few things to know:
 3. If you already have [game directories](#how-does-game-directory-work) defined, update them to the new path.
 
 :::info
-This is where SKlauncher (and the game) downloads everything when not using Setup. If you mean the Windows Setup specifically: modify the install or reinstall, and pick the location yourself when prompted.
+This is where SKlauncher (and the game) downloads everything. The Windows Setup works the same way: the folder you pick during setup only holds `SKlauncher.jar` and its Java. To move everything else, add `--workDir` to the SKlauncher shortcut.
 :::
 
 :::: tabs key:os
@@ -88,7 +88,7 @@ Create a shortcut (or edit an existing one), or run from CMD / Terminal:
 == macOS
 
 - **`.dmg` / `.app` case**:
-    - Terminal: `java -jar ~/Applications/sklauncher/SKlauncher.jar --workDir "$HOME/Games/SKlauncher"`
+    - Terminal: `java -jar /Applications/SKlauncher.app/Contents/Java/SKlauncher.jar --workDir "$HOME/Games/SKlauncher"`
 - **Other cases**:
     - Terminal: `java -jar SKlauncher.jar --workDir "$HOME/Games/SKlauncher"`
 
@@ -162,8 +162,8 @@ Yes. Run the launcher with `--demo`. Skin and cape should still be visible.
 
 Yes. Anything that works for the **Minecraft Launcher** should work in **SKlauncher**. Only the install path may differ:
 
-- **SKlauncher 3.2.x**: install Mod Loaders and Modpacks from the *Installations Manager*. Minecraft Launcher requires you to do this manually.
-- **SKlauncher 3.3.x** &nbsp;<Badge type="info" text="Not released yet" />: in addition to the above, install Mods, Resource Packs, Shaders, and Maps directly.
+- **SKlauncher 3.x**: install Mod Loaders and Modpacks from the *Installations Manager*. Minecraft Launcher requires you to do this manually. Mods, Resource Packs, Shaders, and Maps are installed manually.
+- **SKlauncher 4.0**: installing Mods, Resource Packs, Shaders, Data Packs, and Worlds from inside the launcher was introduced in 4.0. See the [4.0 documentation](/4.0/).
 
 :::info
 Some clients (and a few mods) require **Compatibility Mode**, which disables the SKlauncher skin system.
@@ -171,7 +171,7 @@ Some clients (and a few mods) require **Compatibility Mode**, which disables the
 The [Modding guide](/category/modding) walks through mod loaders. For everything else, [Google](https://www.google.com/) and [YouTube](https://www.youtube.com/) are your friends. A few tips:
 
 - Right-click an installation > **Open installation directory** to find your real game folder (matters if you've set a [Game Directory](#how-does-game-directory-work)).
-- Just like the launcher pulls from [CurseForge](https://www.curseforge.com/minecraft) and [Modrinth](https://modrinth.com/), you can browse those sites manually.
+- The launcher only browses Modrinth modpacks. For CurseForge modpacks, and for single mods, resource packs, or shaders, browse [CurseForge](https://www.curseforge.com/minecraft) and [Modrinth](https://modrinth.com/) yourself.
 - Guides for the Minecraft Launcher (manual installs) are fine. Guides for other launchers may not work.
 :::
 
@@ -187,6 +187,8 @@ The [Modding guide](/category/modding) walks through mod loaders. For everything
 ![Reference image](/img/faq/launcher-related/gamedir.png)
 
 :::tip
+Easiest way: under **Game Directory**, tick **Use separate instance folder**. The launcher then uses `.minecraft\instances\<installation name>`, with spaces replaced by `_`.
+
 In the reference image, *Vanilla 1.17.1* uses `"%APPDATA%\.minecraft\skprofiles\Vanilla 1.17.1"` and *Fabric 1.17.1* uses `"%APPDATA%\.minecraft\skprofiles\Fabric 1.17.1"`.
 
 `skprofiles`, `Vanilla 1.17.1`, and `Fabric 1.17.1` were created manually. You can name them whatever you like (`Game-Instances`, `Custom`, `Example`, etc.). The only rule: **don't put them inside game folders** (e.g. `versions`).
@@ -201,6 +203,8 @@ Right-click an installation > **Open installation directory** opens that install
 Yes. Edit the installation, find **More Options > Java Executable**, click the folder icon, and pick the `javaw.exe` (Windows) or `java` (Linux / macOS) you want. Temurin, Liberica, anything works.
 
 To revert to **Use bundled Java runtime**, just clear the path you set.
+
+The Java you pick must be at least the version your Minecraft version needs, or the game won't start. You can tick **Skip Java runtime version check** if you know what you're doing. **Use Dedicated GPU** doesn't apply to installations with their own Java.
 
 :::tip
 Don't install one Java for SKlauncher and another for the game. Use a portable Java distribution (`.zip` on Windows, `.tar.gz` on Linux / macOS). You can experiment freely. The Java that won't start SKlauncher might be the one that gives you the best in-game performance.
@@ -250,6 +254,8 @@ Launcher logs always live with [`.minecraft`](#where-is-sklauncher-installed). G
 - **Launcher**: `.minecraft\sklauncher\sklauncher_logs.txt`
 - **Game**: `.minecraft\logs\latest.log` and `.minecraft\crash-reports\crash-YYYY-MM-DD_HH.MM.SS-client.txt`
 
+The launcher log is replaced every time SKlauncher starts, so copy it before you open the launcher again.
+
 :::tip
 Paste log contents into [mclo.gs](https://mclo.gs/) and share the link instead of dumping a wall of text. Or [upload the file directly to Discord](https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ#h_01J4M00QYZTXY5FV9KDWT05H5T).
 
@@ -278,12 +284,14 @@ Only enable debug mode **if asked to**. **Revert the changes afterwards.**
 1. [Download](/getting-started/downloads#downloading) the `.jar` build of SKlauncher and run it from a terminal: `java -jar SKlauncher.jar`
 2. Copy the entire console output (after it stops or stalls) and paste it into Discord.
 
+If SKlauncher shows an error window instead, click **Copy report** and paste it into Discord.
+
 #### Can't start the game, or the game has issues?
 
-1. Open the launcher, go to **Launcher Settings**, and enable **Show Launcher Console**. A new **Launcher Log** tab appears in the main screen. Click it.
+1. Open the launcher, go to **Launcher Settings**, enable **Show Launcher Console**, then click **Save**. A new **Launcher Log** tab appears in the main screen. Click it.
 2. Edit the problem installation. Under **More Options**:
     - **Launcher Visibility**: *Keep the launcher open and show game output*
-    - **JVM Arguments**: append `-Xdiag -Dsklauncher.debug=true` (mind the leading space when you paste).
+    - **JVM Arguments**: append ` -Dsklauncher.debug=true` (mind the leading space when you paste). It only adds detail when **Compatibility Mode** is off.
 3. Start the game. The **Game Output** window will appear. Reproduce the issue, then share everything.
 
 :::info

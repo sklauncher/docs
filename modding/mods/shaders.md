@@ -28,9 +28,10 @@ Iris is a shader mod compatible with all existing [OptiFine](/modding/mods/optif
 > This option installs [Sodium](https://modrinth.com/mod/sodium) alongside Iris.
 
 1. Open the [official Iris site](https://www.irisshaders.dev/download) and download the installer.
-2. Run the installer and click **Download**.
-3. An Iris profile appears in SKlauncher. Restart the launcher if it doesn't show up.
-4. Move on to [installing shaders](#installing-iris-shaders).
+2. Close SKlauncher. If it's open while the installer runs, it can remove the new profile.
+3. Run the installer and click **Download**.
+4. Open SKlauncher again. An Iris profile appears in the list.
+5. Move on to [installing shaders](#installing-iris-shaders).
 
 ### As a mod (Fabric / Quilt / NeoForge)
 

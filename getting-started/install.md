@@ -7,21 +7,23 @@ description: Step-by-step guide to installing SKlauncher for Windows, Linux, or 
 
 There are two install paths. Pick the one that matches your download.
 
-- **[Windows Setup](#windows-setup)** &nbsp;<Badge type="tip" text="Recommended" /> &nbsp;: the `.exe` installer. Bundles Java. Click-and-go.
+- **[Windows Setup](#windows-setup)** &nbsp;<Badge type="tip" text="Recommended" /> &nbsp;: the `.exe` installer. Downloads Java for you. Click-and-go.
 - **[Portable install](#portable-install)**: the `.jar` (any OS), `.exe` from the `.zip`, `.dmg`, or `.app`. Requires you to install Java yourself.
 
 ## Windows Setup
 
-Since **3.2**, the Windows installer is the main way to set up SKlauncher. It bundles **Java (Temurin)**, so you don't have to install Java separately or run Setup as administrator. The installer is [open source](https://github.com/sklauncher/installer).
+Since **3.2**, the Windows installer is the main way to set up SKlauncher. It downloads **Java** while it installs, so you don't have to install Java yourself or run Setup as administrator. You need 64-bit Windows and an internet connection during setup. The installer is [open source](https://github.com/sklauncher/installer).
 
 ### Installing
 
 Run the `.exe` you downloaded and follow the wizard:
 
-1. **Select Start Menu Folder**: optional, only changes the shortcut path, not where the launcher itself goes.
-2. **Ready To Install**: click **Install** to proceed, or **Back** to change the shortcut path.
-3. **Installing SKlauncher**: wait for the progress bar to finish.
-4. **Completing the SKlauncher 3.2 Setup Wizard**: click **Finish** and you're done.
+1. **Welcome**: click **Next**.
+2. **Select Destination Location** (first install only): keep the default folder and click **Next**.
+3. **Select Start Menu Folder**: optional, only changes the shortcut path, not where the launcher itself goes.
+4. **Ready to Install**: click **Install** to proceed, or **Back** to change something.
+5. **Installing SKlauncher**: Setup downloads Java, then installs. Wait for the progress bar to finish.
+6. **Completing the SKlauncher Setup Wizard**: keep **Launch SKlauncher** checked to start it now, then click **Finish**.
 
 ### Running
 
@@ -35,13 +37,15 @@ Use this if you downloaded a `.jar`, the `.exe` from the `.zip`, the `.dmg`, or 
 
 ### Java requirements
 
-SKlauncher used to require **Java 8 with JavaFX**. That's no longer the case: you can now use the latest LTS, currently **Java 21**.
+SKlauncher runs on **Java 8 with JavaFX**, or on **Java 17 and newer**. Java 9 to 16 don't work. We recommend the latest LTS, currently **Java 25**.
+
+The `.dmg` and `.app` on macOS need **Java 21 or newer**. Only the `.jar` works with Java 8.
 
 :::danger
-Support for Java 8 with JavaFX will be removed in the future. **We recommend Java 21.**
+Support for Java 8 with JavaFX will be removed in the future. **We recommend Java 25.**
 :::
 
-### Installing Java 21 &nbsp;<Badge type="tip" text="Recommended" />
+### Installing Java 25 &nbsp;<Badge type="tip" text="Recommended" /> {#installing-java-25}
 
 :::: tabs key:os
 
@@ -70,11 +74,11 @@ Distro coverage varies. When in doubt, follow the [Adoptium guide](https://adopt
     - Debian / Ubuntu: `sudo apt-get update`
     - CentOS / RHEL / Fedora: `sudo yum update`
     - openSUSE / SLES: `sudo zypper refresh`
-2. Install Java 21:
-    - Debian / Ubuntu: `sudo apt-get install temurin-21-jdk`
-    - CentOS / RHEL / Fedora: `sudo yum install temurin-21-jdk`
-    - openSUSE / SLES: `sudo zypper install temurin-21-jdk`
-3. Verify with `java -version`. You should see Java 21.
+2. Install Java 25:
+    - Debian / Ubuntu: `sudo apt-get install temurin-25-jdk`
+    - CentOS / RHEL / Fedora: `sudo yum install temurin-25-jdk`
+    - openSUSE / SLES: `sudo zypper install temurin-25-jdk`
+3. Verify with `java -version`. You should see Java 25.
 
 == macOS
 
@@ -182,11 +186,11 @@ Setup automates this:
 
 Yes. SKlauncher downloads the game's required Java version itself, so any Java on your machine is fine.
 
-> If you want to use a *different* Java when actually playing (e.g. Java 21 for a 1.16.5 game that ships Java 17), see [Can I use a different Java for the game?](/faq/launcher-related#can-i-use-a-different-java-for-the-game).
+> If you want to use a *different* Java when actually playing (e.g. Java 21 for a 1.18.2 game that ships Java 17), see [Can I use a different Java for the game?](/faq/launcher-related#can-i-use-a-different-java-for-the-game).
 
 ### Why do I need Java 8 *with JavaFX*?
 
-SKlauncher is built on JavaFX, which isn't bundled with vanilla Java 8. You need either Java 8 + JavaFX or Java 21.
+SKlauncher is built on JavaFX, which isn't bundled with vanilla Java 8. On Java 17 and newer, SKlauncher downloads JavaFX by itself, so you need either Java 8 with JavaFX or Java 17 and newer.
 
 ### Can I avoid installing Java entirely?
 
@@ -222,9 +226,9 @@ Did you have Java installed before, then install the one from this guide? Or uni
 **Restart your PC**. It often saves a lot of debugging.
 :::
 
-### "Temurin 21 is installed, but it says I don't have Java"
+### "Temurin 25 is installed, but it says I don't have Java"
 
-You probably skipped the *Custom Setup* screen. Reinstall Java 21 and follow the [Windows steps above](#installing-java-21-recommended) carefully.
+You probably skipped the *Custom Setup* screen. Reinstall Java 25 and follow the [Windows steps above](#installing-java-25) carefully.
 
 ### "Liberica 8 is installed, but it says I don't have Java 8 with JavaFX"
 

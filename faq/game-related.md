@@ -21,10 +21,12 @@ Apply changes with the game closed.
 ### Option A: Force dGPU from launcher settings
 
 1. Open the launcher and go to **Launcher Settings**.
-2. Enable **Use Dedicated GPU**.
+2. Enable **Use Dedicated GPU** (Windows only) and click **Save**.
 3. Start the game.
 
 You'll see the game now uses `MinecraftJava.exe` instead of `javaw.exe`.
+
+This only works for installations that use the bundled Java. If you set a **Java Executable** in the installation, use Option B or C.
 
 ### Option B: Force dGPU from Windows settings
 

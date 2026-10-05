@@ -23,7 +23,7 @@ Since **Release 1.3.1** the game ships with an integrated server in the client, 
 2. Below *Scanning for games on your local network*, the host's world should appear.
     - The list refreshes every 1.5 seconds, so don't spam *Refresh*.
 3. Select the server and click **Join Server** (or double-click it).
-    - **Direct Connection** / **Add Server** only works if both you and the host use Microsoft accounts. Otherwise you'll hit [this error](#failed-to-login-invalid-session).
+    - **Direct Connection** / **Add Server** only works if both you and the host use Microsoft accounts, or the host turned on [Force LAN Offline Mode](#sklauncher-setting). Otherwise you'll hit [this error](#failed-to-login-invalid-session).
 
 ## Common issues
 
@@ -31,7 +31,13 @@ There are many possible problems. [This external guide](https://www.howtogeek.co
 
 ### Failed to login: Invalid session
 
-Normally [solved on the server side](/troubleshooting/game-related#failed-to-login-invalid-session), but you don't have a `server.properties` file with LAN. Two options below. The first works in any setup.
+Normally [solved on the server side](/troubleshooting/game-related#failed-to-login-invalid-session), but you don't have a `server.properties` file with LAN. Three options below. The vanilla one works in any setup.
+
+#### SKlauncher setting
+
+If the host uses SKlauncher, open **Launcher Settings**, turn on **Force LAN Offline Mode** and click **Save**. Then start the game and open the world to LAN. Players can now also join with **Direct Connection**.
+
+This doesn't work when **Compatibility Mode** is on for the installation, and it may not work on older Minecraft versions.
 
 #### Vanilla (no mods)
 

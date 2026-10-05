@@ -19,13 +19,13 @@ Read the [4.0 announcement post](https://next.skmedix.pl/blog/update-4-0) for th
 
 ## Features
 
-- 💄 &nbsp;Light and Dark modes, color themes, and Modern or Classic layouts
-- 📦 &nbsp;One-click installs of mods, modpacks, shaders and more from Modrinth and CurseForge
-- 🔄 &nbsp;Updating modpacks
-- 🗂️ &nbsp;Instances for Vanilla, Forge, Fabric, Quilt, and NeoForge
+- 💄 &nbsp;Light, Dark and OLED modes, color themes, and Modern or Classic layouts
+- 📦 &nbsp;One-click installs of mods, modpacks, resource packs, shaders, data packs and worlds from Modrinth and CurseForge
+- 🔄 &nbsp;Updating mods and modpacks
+- 🗂️ &nbsp;Instances for Vanilla, Fabric, Forge, NeoForge, Quilt, Legacy Fabric, Babric, Ornithe and OptiFine
 - ☕ &nbsp;Automatic Java setup per instance
-- 🧥 &nbsp;Changing skins, for Microsoft accounts
-- 📥 &nbsp;Importing instances from many other launchers
+- 🧥 &nbsp;Changing skins and capes, for Microsoft accounts
+- 📥 &nbsp;Importing instances from the official launcher, SKlauncher 3.2, CurseForge, Modrinth, Prism and MultiMC
 - 📁 &nbsp;Built-in file explorer for instance files
 - 🖼️ &nbsp;Screenshot gallery for each instance
 - 🌐 &nbsp;Server browser provided by [Xyrios](https://xyrios.com/minecraft)

@@ -13,11 +13,11 @@ Always download mods from trusted sources. Anything else can damage your system.
 
 1. Open **SKlauncher**.
 2. Go to the **Installations Manager** tab in the left menu.
-3. Click **New Installation**.
-4. In the **Create new installation** window:
+3. Click **New installation**.
+4. In the **Edit installation** screen:
     - Give the installation a name (e.g. `Fabric 1.21.1`).
-    - Select **Fabric** from the version-type list.
-    - Choose your Minecraft and Fabric Loader versions.
+    - Under **Version**, click **Fabric**.
+    - Pick your Minecraft version in the first list and the Fabric Loader version in the second. A star marks the recommended loader version.
 5. *(Optional)* Customise other settings:
     - Pick or upload an icon.
     - Change the game directory.
@@ -26,7 +26,11 @@ Always download mods from trusted sources. Anything else can damage your system.
 
 ## Manual install
 
-Alternatively, download the [official Fabric installer](https://fabricmc.net/use/installer) and run it. The new installation appears in SKlauncher (restart the launcher if it doesn't show up immediately).
+Alternatively, close SKlauncher, then download the [official Fabric installer](https://fabricmc.net/use/installer) and run it. Open SKlauncher again when the installer is done.
+
+:::warning
+Don't run the installer while SKlauncher is open. SKlauncher only reads the list of installations when it starts, and it can remove the new installation when it saves its own changes.
+:::
 
 ## Installing Fabric API
 
@@ -40,6 +44,7 @@ Fabric API is required by many Fabric mods.
     - macOS: `~/Library/Application Support/minecraft/mods/`
     - Linux: `~/.minecraft/mods/`
     - Create the folder if it doesn't exist.
+    - If you set a custom [game directory](/faq/launcher-related#how-does-game-directory-work) or ticked **Use separate instance folder**, use the `mods` folder there instead.
 5. Drop the `.jar` into the `mods` folder.
 
 ## Launching Fabric

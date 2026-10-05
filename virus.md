@@ -29,10 +29,10 @@ To simplify things (*since there are many Antivirus and hundreds of combinations
 
 > **When you download the .exe or .jar file, your browser may block it as "potentially unwanted".**
 
-This occurs because of SmartScreen, which is reputation-based. Files that are new and unsigned often trigger these alerts.\
+This occurs because of SmartScreen, which is reputation-based. Files that are new and have no code signing certificate often trigger these alerts.\
 As more users download and approve SKlauncher, this alert will disappear. Generally, the .exe file might clear SmartScreen faster than the .jar.
 
-Why does this happen? Since the file is unsigned and new, it doesn’t yet have a trustworthy reputation in SmartScreen.
+Why does this happen? Since the file is new and has no Windows code signing certificate, it doesn’t yet have a trustworthy reputation in SmartScreen.
 
 :::info
 
@@ -67,7 +67,7 @@ Already answered [here](/faq/launcher-related#is-sklauncher-open-source) (short 
 ## Are there any Vulnerabilities?
 
 SKlauncher has experienced only one known vulnerability, Log4j, which affected many platforms. SKlauncher patched it faster than Microsoft, and there were no reports of SKlauncher users being impacted.\
-Fractureiser (a malware in certain mods) is another example, SKlauncher actively detected and warned users if an infected mod was detected during installation.
+Fractureiser (malware spread through certain mods) is another example. When SKlauncher starts, it checks your computer for the files Fractureiser leaves behind. If it finds them, it warns you and closes. SKlauncher also deletes known malicious mods from your `mods` folder before the game starts.
 
 If you hear about a vulnerability affecting SKlauncher or the game, remember:
 1. Stay calm and investigate.
@@ -86,6 +86,8 @@ There’s a myth that SKlauncher stores or sells user data, especially for Micro
     - Absolutely nothing
 - Launcher data:
     - Google Analytics
+
+SKlauncher's servers store nothing for Microsoft accounts. The launcher keeps your login on your own computer so you stay logged in.
 
 ### Offline accounts
 
@@ -113,7 +115,7 @@ Would a more detailed answer with code and all that nice stuff be great? It real
 You tell me "SKlauncher has a virus because this report says it does X" and I've to reverse engineer what the report says and ask myself "Of everything my launcher does, what is the closest thing to this?". Because even if I report the false positive to the Antivirus, they're never going to tell me "Oh yeah sorry, it's just that you do X thing and we misinterpreted it".
 
 How many times have you heard "SKlauncher is a virus"? Probably many.\
-How many times did you hear "SKlauncher verifies that your DNS hasn’t been altered to ensure secure connections to SKlauncher, Microsoft, Mojang, etc. and even checks if any mod you installed is infected by Fractureiser"? I put my hands on the fire: you never heard of it.
+How many times did you hear "SKlauncher checks if your hosts file redirects SKlauncher, Mojang, or Forge servers and then looks up their real addresses itself, and even checks your computer for Fractureiser"? I put my hands on the fire: you never heard of it.
 
 Why does this happen? Because those spreading these accusations don’t understand the technology. They don’t know how to generate or interpret reports, and they’re often uninterested in finding the truth.\
 For example, once I was flagged for collecting your list of games, but the reality was simple: I read and write the same file that Minecraft Launcher uses (launcher_profiles.json). If they’d looked more closely at the report, they’d have seen this for themselves.

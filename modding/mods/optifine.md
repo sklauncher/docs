@@ -23,18 +23,19 @@ There are two install paths:
 
 > Make sure you've launched the matching Minecraft version at least once before running the installer.
 
-1. Run the `.jar` you downloaded.
-2. Click **Install**.
-3. Restart SKlauncher.
-4. Select the **OptiFine** profile.
-5. Done.
+1. Close SKlauncher. If it's open while the installer runs, it can remove the new profile.
+2. Run the `.jar` you downloaded.
+3. Click **Install**.
+4. Open SKlauncher again.
+5. Select the **OptiFine** profile.
+6. Done.
 
 ### As a Forge mod
 
 1. Open the **Installations Manager** and create a new installation.
-2. In the version chooser, select **Forge** and pick your Minecraft version.
+2. Under **Version**, click **Forge** and pick your Minecraft version.
 3. Customise as needed and save.
-4. Right-click the new installation and choose **Open Installation Directory**.
+4. Right-click the new installation in the sidebar and choose **Open installation directory**.
 5. The file manager opens at the game directory. Create a `mods` folder inside it.
 6. Drag your OptiFine `.jar` into that folder.
 7. Done.

@@ -15,7 +15,7 @@ While 4.0 is in beta, its downloads live on the beta site. Grabbing it takes a f
 2. Make sure the **Beta** channel is selected. The **Stable** channel is still **3.2**, covered by the [3.2 documentation](/getting-started/downloads).
 3. Pick the build for your OS:
     - **Windows**: download the **Setup** installer (x64).
-    - **macOS**: download the **`.dmg`**.
+    - **macOS**: download the **`.dmg`** for your Mac: **arm64** for Apple Silicon (M1 and newer), **x64** for Intel.
     - **Linux**: download the **AppImage** (x86_64).
 4. Continue with the [Installation guide](/4.0/getting-started/install).
 
@@ -34,7 +34,7 @@ The 4.0 launcher does not need Java to run. Each instance also downloads the Jav
 | **Operating system** | Windows 10 (version 1909) or later |
 | **Processor** | 64-bit x86 processor |
 | **Memory** | 4 GB minimum, 8 GB recommended |
-| **Storage** | ~120 MB for the launcher, plus space for game files |
+| **Storage** | ~130 MB to download, ~420 MB once installed, plus space for game files |
 
 == Linux
 
@@ -43,16 +43,16 @@ The 4.0 launcher does not need Java to run. Each instance also downloads the Jav
 | **Operating system** | Most modern distributions (Ubuntu 20.04+, Fedora 34+, Arch) |
 | **Processor** | 64-bit x86 processor |
 | **Memory** | 4 GB minimum, 8 GB recommended |
-| **Storage** | ~118 MB for the launcher, plus space for game files |
+| **Storage** | ~150 MB for the AppImage, plus space for game files |
 
 == macOS
 
 | | |
 |---|---|
 | **Operating system** | macOS 12 Monterey or later |
-| **Processor** | Intel or Apple Silicon (Universal binary) |
+| **Processor** | Apple Silicon or Intel (each has its own download) |
 | **Memory** | 4 GB minimum, 8 GB recommended |
-| **Storage** | ~125 MB for the launcher, plus space for game files |
+| **Storage** | ~150 MB to download, plus space for game files |
 
 ::::
 
@@ -64,7 +64,7 @@ Visit the [virus FAQ](/virus) for the long answer (it's a complex topic). Short 
 
 ### Why does my OS warn me about the app?
 
-Beta builds are **not code-signed yet**, so Windows SmartScreen or macOS Gatekeeper may show a warning on first launch. The warning is harmless. See [Installation](/4.0/getting-started/install) for how to get past it. Code-signing is planned and will be funded by [community support](https://next.skmedix.pl/support-us).
+Windows builds are **not code-signed yet**, so Windows SmartScreen may show a warning on first launch. The warning is harmless. See [Installation](/4.0/getting-started/install) for how to get past it. Code-signing is planned and will be funded by [community support](https://next.skmedix.pl/support-us).
 
 ### Can I keep using 3.2?
 

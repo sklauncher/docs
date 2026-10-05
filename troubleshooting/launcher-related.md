@@ -23,6 +23,8 @@ Two common causes:
 
 This only affects Windows. Linux and macOS only allow alphanumeric usernames (no accents or special characters), so they're not affected.
 
+SKlauncher warns you about it when it starts: "Your folder path has characters Java can't handle on this system. The game may fail to start." It checks the SKlauncher folder, your user folder, and your temp folder, so the warning can still show after Option A.
+
 Two options:
 
 - **Option A**: [Install SKlauncher in another folder](/faq/launcher-related#can-i-install-sklauncher-in-another-folder), e.g. `C:\Games\SKlauncher`.
@@ -30,7 +32,7 @@ Two options:
 
 ## Connection problems
 
-Maybe the website doesn't load, or the launcher says "Offline Mode: You're connected to the Internet", or some other internet-shaped error.
+Maybe the website doesn't load, the launcher shows "Offline mode: You're connected to the internet, but some SKlauncher services are unreachable", the startup window says "Servers unreachable, starting offline", or some other internet-shaped error.
 
 These are tricky because the cause can be:
 
@@ -57,7 +59,7 @@ If none of the above worked, it may be an external problem you can only wait out
 ## Launcher starts but closes or hangs forever
 
 1. Delete other launchers' folders inside `.minecraft`.
-2. Delete the `sklauncher` folder inside `.minecraft`.
+2. Delete the `sklauncher` folder inside `.minecraft`. This also logs you out and resets the launcher settings.
 3. Delete the `java` folder inside `%APPDATA%`.
 4. Confirm Java is allowed in your firewall and antivirus.
 5. Follow the [Installation guide](/getting-started/install) again, then restart the PC.
@@ -73,12 +75,13 @@ If you saved the skin/cape [correctly](/faq/web-related#how-do-i-put-on-a-skin-o
 
 ## My skin isn't visible on servers or with mods
 
+- **Compatibility Mode**: check that it's off for that installation (**Edit installation > More Options**). It turns off the SKlauncher skin system.
 - **Singleplayer**: if it works in vanilla, the culprit is the mod loader or one of your mods. Disable mods until you find the offender. If it's the mod loader itself, [report it on Discord](https://skmedix.pl/discord).
 - **Multiplayer**: some servers offer plugins like `/skin MicrosoftUsername` to set a skin (some accept a URL too, depending on the plugin).
 
 ## I can't see any version in SKlauncher
 
-Check your [launcher logs](/faq/launcher-related#where-are-the-logs-located). If they mention "DNS Poisoning", you have a problem:
+Check your [launcher logs](/faq/launcher-related#where-are-the-logs-located). If they say "Failed to refresh versions list, SSL handshake failed", something may be blocking or redirecting the Mojang servers, for example a changed hosts file:
 
 1. Run a full system scan with your antivirus. The deeper, the better. Wait for it to finish.
 
@@ -90,11 +93,14 @@ Check your [launcher logs](/faq/launcher-related#where-are-the-logs-located). If
 
 ## I can't allocate more than 1 GB
 
-You need a **64-bit (x64) Java**. See the [Installation guide](/getting-started/install).
+The 1 GB limit comes from a 32-bit system or a 32-bit Java.
+
+- **32-bit (x86) system**: the launcher only offers up to 1 GB. You need a 64-bit system to use more.
+- **64-bit system**: check that the installation doesn't use a 32-bit Java under **More Options > Java Executable**. Clear the field to use the bundled Java.
 
 ## I can only play in Demo mode
 
-If you didn't [force demo mode](/faq/launcher-related#can-i-force-the-demo-mode), re-read the [Log in](/getting-started/login) guide.
+If you didn't [force demo mode](/faq/launcher-related#can-i-force-demo-mode), re-read the [Log in](/getting-started/login) guide.
 
 ## "X" client doesn't work
 

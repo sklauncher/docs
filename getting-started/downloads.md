@@ -19,7 +19,7 @@ Grabbing SKlauncher takes three steps:
 3. Continue with the [Installation guide](/getting-started/install).
 
 :::info
-Since **3.2**, the **Windows Setup** is the recommended install method. It bundles **Java (Temurin)**, so you don't have to install Java separately. The installer is open source: [github.com/sklauncher/installer](https://github.com/sklauncher/installer).
+Since **3.2**, the **Windows Setup** is the recommended install method. It downloads **Java** while it installs, so you don't have to install Java yourself. You need 64-bit Windows and an internet connection during setup. The installer is open source: [github.com/sklauncher/installer](https://github.com/sklauncher/installer).
 :::
 
 ## Common questions
@@ -32,7 +32,7 @@ Some users have questions before or after downloading. The main ones:
 
 == Windows
 
-- **Setup** &nbsp;<Badge type="tip" text="Recommended" />: the main install method since 3.2. Bundles **Java (Temurin)**, so nothing else needs to be installed. The installer itself is [open source](https://github.com/sklauncher/installer).
+- **Setup** &nbsp;<Badge type="tip" text="Recommended" />: the main install method since 3.2. Downloads **Java** while it installs, so nothing else needs to be installed. The installer itself is [open source](https://github.com/sklauncher/installer).
 - **`.jar`**: requires Java to run. It's **portable**, meaning it can be run from any directory.
 - **`.exe`** *(included in the `.zip` only)*: the `.jar` converted to `.exe` using Exe4j. The only difference is that the `.exe` shows an error message if Java is missing or outdated (and has a nicer icon). It's a holdover from before Setup existed and will eventually be removed.
 
@@ -43,8 +43,8 @@ Some users have questions before or after downloading. The main ones:
 
 == macOS
 
-- **`.dmg` and `.app`**: both require Java to work. The `.app` inside the `.dmg` must be dragged into the Applications folder.
-- **`.jar`**: also requires Java to run. It's **portable**, meaning it can be run from any directory.
+- **`.dmg` and `.app`**: both need **Java 21 or newer**. The `.app` inside the `.dmg` must be dragged into the Applications folder.
+- **`.jar`**: also requires Java to run, but works with Java 8 too. It's **portable**, meaning it can be run from any directory.
 
 ::::
 

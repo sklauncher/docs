@@ -14,7 +14,7 @@ You can play multiplayer, but only on servers with [`online-mode=false`](/troubl
 ## Login
 
 1. Open SKlauncher and click **Switch to offline mode** (currently in the bottom-left corner).
-2. Type a username:
+2. Type a username. It must be 2 to 16 characters long and can only use English letters, numbers, `_` and `-`.
     - The same one you registered on the SKlauncher site to use your **SK account**, **or**
     - Any username you want, for a plain offline session.
 3. Click **Login offline**.

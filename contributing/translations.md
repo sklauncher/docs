@@ -35,11 +35,21 @@ You need a GitHub account to contribute. [Sign up here](https://github.com/signu
 3. Copy the contents of [`sklmessages_en_US.properties`](https://raw.githubusercontent.com/skmedix/SKlauncher/main/assets/launcher/lang/sklmessages_en_US.properties) into your new file. Then translate, line by line:
 
     ```diff
-    -lang.name=English
+    -lang.name=English (US)
     -lang.code=en_US
     +lang.name=Ślōnskŏ gŏdka
     +lang.code=szl_PL
     ```
+
+    `lang.name` is the name shown in the language list. Write it in your own language.
+
+4. To be credited, put your name in `about.translation.authors`, for example `about.translation.authors=YourName`. Separate several names with `;`.
+
+:::tip
+- Save the file as UTF-8.
+- Keep `%s`, `%.1f`, and `\n` exactly as they are in the English line.
+- If you can't translate a line, leave it out. The launcher shows the English text instead.
+:::
 
 ### Editing an existing translation
 
@@ -55,9 +65,11 @@ If your language already has a file, just edit it.
 
 To submit, open a **pull request**.
 
-1. Go to the [pull requests tab](https://github.com/skmedix/SKlauncher/) of the SKlauncher repo.
+1. Go to the [pull requests tab](https://github.com/skmedix/SKlauncher/pulls) of the SKlauncher repo.
 2. Click **New pull request** in the top-right.
 3. Choose `main` as the base and your branch as the compare branch.
 4. Add a title and description. Click **Create pull request**.
 
 That's it. Reviews usually take 1 to 2 days, sometimes less. Watch your email or GitHub notifications for follow-up comments.
+
+After your pull request is merged, your translation is added to the launcher in a later update. For a new language, the SKlauncher team also adds it to the language list. You don't need to do this yourself.

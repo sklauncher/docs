@@ -6,7 +6,7 @@ description: Everything you need to know to use your Microsoft account in SKlaun
 # Microsoft login
 
 :::info
-This option is **only for users who own [Minecraft: Java Edition](/faq/launcher-related#where-can-i-buy-the-game)** *and* have signed in to it at least once via the [Minecraft Launcher](https://www.minecraft.net/en-us/download) ([alternative download](https://www.minecraft.net/en-us/download/alternative)).
+This option is **only for users who own [Minecraft: Java Edition](/faq/launcher-related#where-can-i-buy-the-game)** (or have it through Game Pass) *and* have signed in to it at least once via the [Minecraft Launcher](https://www.minecraft.net/en-us/download) ([alternative download](https://www.minecraft.net/en-us/download/alternative)).
 :::
 
 ## Login
@@ -33,15 +33,15 @@ It's not dangerous. Don't share your access or refresh tokens publicly. If you t
 ### What data does SKlauncher store about my Microsoft account?
 
 - **From the launcher**: Google Analytics data.
-- **About your Microsoft account**: nothing.
+- **About your Microsoft account**: nothing on our servers. The launcher keeps your Minecraft name, UUID and login token on your own PC, so you stay logged in.
 
 ## Common issues
 
-### "Couldn't log in" / "Profile not found"
+### "Sorry, we couldn't log you in!" / "No Minecraft profile found!"
 
 Read the error message and follow what it says. If that doesn't help:
 
 1. Check that [Xbox Live](https://support.xbox.com/en-US/xbox-live-status) isn't down.
-2. Re-read the info at the top of this page. Both conditions must hold.
+2. Re-read the info at the top of this page. Both conditions must hold. If you have Game Pass, open the official Minecraft Launcher once to set up your username.
 3. Restart the launcher and try again.
-4. Still stuck? [Ask in Discord](https://skmedix.pl/discord) and attach the log (click <u>Open Log</u> in the launcher).
+4. Still stuck? [Ask in Discord](https://skmedix.pl/discord) and attach `sklauncher_logs.txt`. Click <u>Open Log</u> in the launcher to open the folder that has it.

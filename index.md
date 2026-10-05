@@ -19,10 +19,10 @@ For {{ new Date().getFullYear() - 2013 }} years, SKlauncher has enabled users to
 
 ## Features
 
-- ☕ &nbsp;Built with Java 8, with support for Java 21
+- ☕ &nbsp;Runs on Java 8 or Java 17 and newer, Java 25 recommended
 - 🔒 &nbsp;Supports authentication with Microsoft accounts
 - 🚀 &nbsp;Frequently updated to provide new features
-- 📦 &nbsp;Supports installing and managing modifications &nbsp;<Badge type="tip" text="Available in the 4.0 beta" />
+- 📦 &nbsp;Supports installing and managing mods &nbsp;<Badge type="tip" text="Since 4.0" />
 - 💄 &nbsp;Simple and easy-to-use design
 
 ## The team
