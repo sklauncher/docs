@@ -24,7 +24,25 @@ Beta builds are **not code-signed yet**, so your OS may show a warning on first 
 
 == Linux
 
-1. Make the AppImage executable:
+We recommend [Gear Lever](https://flathub.org/apps/it.mijorus.gearlever) to manage the AppImage. It works on any distribution and adds SKlauncher to your app menu, so you can launch it like any other installed app. SKlauncher updates itself either way.
+
+1. Install Gear Lever from Flathub:
+
+    ```sh
+    flatpak install flathub it.mijorus.gearlever
+    ```
+
+    > No `flatpak` command? Follow the [Flatpak setup guide](https://flatpak.org/setup/) for your distro first.
+
+2. Open the downloaded AppImage with Gear Lever: right-click the file, choose **Open With → Gear Lever**, or drag it into the Gear Lever window.
+3. Click **Unlock**, then **Move to the app menu**.
+4. Launch **SKlauncher** from your app menu.
+
+**Running the AppImage directly**
+
+Prefer not to install anything? You can run the AppImage on its own; it just won't show up in your app menu:
+
+1. Make it executable:
 
     ```sh
     chmod +x SKlauncher*.AppImage
